@@ -1,0 +1,546 @@
+import { Link } from 'react-router-dom'
+import { useRef, useEffect, useState } from 'react'
+import SEO from '../components/SEO'
+
+const Services = () => {
+  const [activeTab, setActiveTab] = useState<'platform' | 'technology'>('platform')
+  const heroRef = useRef<HTMLDivElement>(null)
+  const [isHeroVisible, setIsHeroVisible] = useState(false)
+  // Hero animation observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsHeroVisible(true)
+          }
+        })
+      },
+      {
+        threshold: 0.3,
+      }
+    )
+
+    if (heroRef.current) {
+      observer.observe(heroRef.current)
+    }
+
+    return () => {
+      if (heroRef.current) {
+        observer.unobserve(heroRef.current)
+      }
+    }
+  }, [])
+
+  const servicesByPlatform = [
+    {
+      icon: 'devices',
+      title: 'Web Application Development',
+      description: 'Crafting responsive, high-performance web applications tailored to your business needs. From simple websites to complex enterprise solutions.',
+      features: ['React & Next.js', 'Progressive Web Apps', 'E-commerce Solutions', 'Enterprise Applications'],
+    },
+    {
+      icon: 'phone_iphone',
+      title: 'Mobile App Creation',
+      description: 'Building intuitive and engaging native mobile apps for iOS and Android platforms with seamless user experiences.',
+      features: ['iOS & Android', 'Cross-platform Apps', 'App Store Optimization', 'Real-time Features'],
+    },
+    {
+      icon: 'design_services',
+      title: 'UI/UX Design',
+      description: 'Designing beautiful, user-centric interfaces that deliver exceptional user experiences and drive engagement.',
+      features: ['User Research', 'Wireframing', 'Prototyping', 'Design Systems'],
+    },
+    {
+      icon: 'cloud_sync',
+      title: 'Cloud & DevOps Solutions',
+      description: 'Implementing scalable and secure cloud infrastructure to power your applications with high availability.',
+      features: ['AWS & Azure', 'CI/CD Pipelines', 'Containerization', 'Infrastructure as Code'],
+    },
+    {
+      icon: 'neurology',
+      title: 'AI & Machine Learning',
+      description: 'Leveraging artificial intelligence to build smart, data-driven software solutions that learn and adapt.',
+      features: ['Custom AI Models', 'Data Analytics', 'Predictive Systems', 'Natural Language Processing'],
+    },
+    {
+      icon: 'rocket_launch',
+      title: 'Digital Strategy & Consulting',
+      description: 'Strategic guidance to help you navigate digital transformation and achieve your business objectives.',
+      features: ['Digital Roadmaps', 'Technology Audits', 'Process Optimization', 'Innovation Labs'],
+    },
+  ]
+
+  const servicesByTechnology = [
+    {
+      icon: 'code',
+      title: 'Frontend Development',
+      description: 'Modern frontend solutions using React, Vue.js, and Angular for dynamic user interfaces.',
+    },
+    {
+      icon: 'storage',
+      title: 'Backend Development',
+      description: 'Robust backend systems with Node.js, Python, and Go for scalable server-side applications.',
+    },
+    {
+      icon: 'database',
+      title: 'Database Solutions',
+      description: 'Optimized database architectures with PostgreSQL, MongoDB, and Redis for high performance.',
+    },
+    {
+      icon: 'security',
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security implementations and compliance with industry standards.',
+    },
+    {
+      icon: 'api',
+      title: 'API Development',
+      description: 'RESTful and GraphQL APIs designed for seamless integration and scalability.',
+    },
+    {
+      icon: 'analytics',
+      title: 'Data Engineering',
+      description: 'Big data pipelines and analytics platforms for actionable business insights.',
+    },
+  ]
+
+  const processSteps = [
+    { number: '1', title: 'Discover & Strategize', desc: 'We dive deep into your goals to create a comprehensive project roadmap.' },
+    { number: '2', title: 'Design & Prototype', desc: 'Our team crafts intuitive UI/UX designs and interactive prototypes.' },
+    { number: '3', title: 'Develop & Test', desc: 'We write clean, efficient code and rigorously test for quality assurance.' },
+    { number: '4', title: 'Launch & Support', desc: 'We handle deployment and provide ongoing support to ensure success.' },
+  ]
+
+  const techStack = [
+    { name: 'React', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+    { name: 'Next.js', url: 'https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg' },
+    { name: 'Vue.js', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg' },
+    { name: 'Node.js', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+    { name: 'Nest.js', url: 'https://upload.wikimedia.org/wikipedia/commons/a/a8/NestJS.svg' },
+    { name: 'Swift', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg' },
+    { name: 'Kotlin', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg' },
+    { name: 'Figma', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
+    { name: 'Flutter', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' },
+    { name: 'AWS', url: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg' },
+    { name: 'Docker', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
+    { name: 'Python', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+    { name: 'Go', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg' },
+    { name: 'Kubernetes', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg' },
+  ]
+
+  return (
+    <>
+      <SEO
+        title="Services - MacrocosmTech | Software Development Services"
+        description="MacrocosmTech delivers innovative and scalable software solutions tailored to your unique vision. Web apps, mobile apps, UI/UX design, cloud solutions, and AI/ML services."
+        path="/services"
+      />
+      {/* Hero Section */}
+      <div
+        ref={heroRef}
+        className="relative py-16 md:py-24 overflow-hidden"
+      >
+        <div className="flex flex-col gap-8 px-4 md:flex-row md:items-center md:gap-12 max-w-[1400px] mx-auto">
+          <div className={`flex flex-col gap-6 md:gap-8 flex-1 transition-all duration-1000 ${
+            isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}>
+            <div className="flex flex-col gap-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 dark:bg-primary/20 rounded-full w-fit">
+                <span className="material-symbols-outlined text-primary text-lg">rocket_launch</span>
+                <span className="text-primary text-sm font-bold">Our Services</span>
+              </div>
+              <h1 className="text-slate-900 dark:text-white text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.033em]">
+                Building the Future, One Line of Code at a Time.
+              </h1>
+              <p className="text-slate-600 dark:text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl">
+                MacrocosmTech delivers innovative and scalable software solutions tailored to your unique vision. We partner with you to turn ambitious ideas into reality.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link to="/contact">
+                <button className="flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95">
+                  <span className="truncate">Get Started Today</span>
+                </button>
+              </Link>
+              <Link to="/portfolio">
+                <button className="flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 bg-transparent border-2 border-primary text-primary text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/10 dark:hover:bg-primary/20 transition-all">
+                  <span className="truncate">View Our Work</span>
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div
+            className={`flex-1 w-full aspect-video bg-center bg-no-repeat bg-cover rounded-2xl shadow-2xl overflow-hidden transition-all duration-1000 ${
+              isHeroVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+            }`}
+            style={{
+              backgroundImage: `url("/Services-img.jpg")`,
+            }}
+            role="img"
+            aria-label="Services hero image representing our technology and development services"
+          />
+        </div>
+      </div>
+
+      {/* Services Section */}
+      <div className="py-12 md:py-20">
+        <div className="text-center mb-12 px-4">
+          <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-4">
+            Our Services
+          </h2>
+          <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            Comprehensive solutions tailored to your business needs
+          </p>
+        </div>
+
+        {/* Tabs */}
+        <div className="px-4 mb-8">
+          <div className="flex border-b border-slate-200 dark:border-[#3b4354] gap-8 max-w-2xl mx-auto justify-center">
+            <button
+              onClick={() => setActiveTab('platform')}
+              className={`flex items-center justify-center border-b-[3px] pb-4 pt-2 px-6 transition-all ${
+                activeTab === 'platform'
+                  ? 'border-b-primary text-primary'
+                  : 'border-b-transparent text-slate-500 dark:text-[#9ca6ba] hover:text-primary dark:hover:text-white'
+              }`}
+            >
+              <p className="text-sm font-bold leading-normal tracking-[0.015em] whitespace-nowrap">By Platform</p>
+            </button>
+            <button
+              onClick={() => setActiveTab('technology')}
+              className={`flex items-center justify-center border-b-[3px] pb-4 pt-2 px-6 transition-all ${
+                activeTab === 'technology'
+                  ? 'border-b-primary text-primary'
+                  : 'border-b-transparent text-slate-500 dark:text-[#9ca6ba] hover:text-primary dark:hover:text-white'
+              }`}
+            >
+              <p className="text-sm font-bold leading-normal tracking-[0.015em] whitespace-nowrap">By Technology</p>
+            </button>
+          </div>
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+          {(activeTab === 'platform' ? servicesByPlatform : servicesByTechnology).map((service, index) => (
+            <div
+              key={index}
+              className="group flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-slate-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-xl hover:-translate-y-1"
+            >
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-colors">
+                <span className="material-symbols-outlined text-primary text-3xl">{service.icon}</span>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-sm text-slate-600 dark:text-gray-400 leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            </div>
+            {service.features && (
+              <div className="pt-2 border-t border-gray-200 dark:border-[#282e39]">
+                <ul className="flex flex-wrap gap-2">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="text-xs px-3 py-1 bg-gray-100 dark:bg-white/5 rounded-full text-gray-600 dark:text-gray-400">
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Development Process Section */}
+      <div className="py-12 md:py-20 bg-gray-100/50 dark:bg-white/5 rounded-xl mx-4 my-8">
+        <div className="px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-4">
+              Our Development Process
+            </h2>
+            <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              A proven methodology that ensures success from concept to launch
+            </p>
+          </div>
+          <div className="relative max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+              {processSteps.map((step, index) => (
+                <div key={index} className="flex flex-col items-center text-center group relative">
+                  <div className="relative mb-6 w-full">
+                    <div className="w-20 h-20 rounded-full bg-primary/20 dark:bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 dark:group-hover:bg-primary/30 transition-all group-hover:scale-110 mx-auto relative z-10 border-4 border-white dark:border-[#1C2333]">
+                      <span className="text-primary text-3xl font-bold">{step.number}</span>
+                    </div>
+                    {/* Connecting Line - Desktop: Horizontal line from center of this circle to next */}
+                    {index < processSteps.length - 1 && (
+                      <div className="hidden lg:block absolute top-10 left-[calc(50%+2.5rem)] w-[calc(25%-5rem)] h-1 bg-primary/70 z-0">
+                        <div className="w-full h-full bg-gradient-to-r from-primary/80 via-primary/70 to-primary/60"></div>
+                      </div>
+                    )}
+                    {/* Mobile/Tablet: Vertical line below */}
+                    {index < processSteps.length - 1 && (
+                      <div className="lg:hidden absolute top-20 left-1/2 -translate-x-1/2 w-1 h-20 bg-gradient-to-b from-primary via-primary/60 to-transparent"></div>
+                    )}
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">{step.title}</h3>
+                  <p className="text-sm text-slate-600 dark:text-gray-400 leading-relaxed">{step.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Technology Stack Section */}
+      <div className="py-12 md:py-20">
+        <div className="px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-4">
+              Our Technology Stack
+            </h2>
+            <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              Cutting-edge tools and frameworks we use to build exceptional solutions
+            </p>
+          </div>
+          <div className="max-w-6xl mx-auto">
+            {/* First Row - 8 items */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-6 mb-6">
+              {techStack.slice(0, 8).map((tech, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center justify-center p-4 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-lg hover:scale-110 group"
+                >
+                  <img
+                    className="h-12 w-12 grayscale group-hover:grayscale-0 transition-all"
+                    alt={`${tech.name} logo`}
+                    src={tech.url}
+                    loading="lazy"
+                  />
+                  <span className="text-xs text-gray-600 dark:text-gray-400 mt-2 font-medium">{tech.name}</span>
+                </div>
+              ))}
+            </div>
+            {/* Second Row - 6 items (centered) */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 max-w-4xl mx-auto">
+              {techStack.slice(8, 14).map((tech, index) => (
+                <div
+                  key={index + 8}
+                  className="flex flex-col items-center justify-center p-4 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-lg hover:scale-110 group"
+                >
+                  <img
+                    className="h-12 w-12 grayscale group-hover:grayscale-0 transition-all"
+                    alt={`${tech.name} logo`}
+                    src={tech.url}
+                    loading="lazy"
+                  />
+                  <span className="text-xs text-gray-600 dark:text-gray-400 mt-2 font-medium">{tech.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Why Choose Our Services Section */}
+      <div className="py-12 md:py-20 bg-primary/5 dark:bg-primary/10 rounded-xl mx-4 my-8">
+        <div className="px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-4">
+              Why Choose Our Services
+            </h2>
+            <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              What sets us apart in delivering exceptional results
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                icon: 'verified_user',
+                title: 'Expert Team',
+                description: 'Our team consists of certified professionals with years of experience in their respective fields.',
+                stat: '50+ Experts',
+              },
+              {
+                icon: 'schedule',
+                title: 'On-Time Delivery',
+                description: 'We respect deadlines and deliver projects on time without compromising quality.',
+                stat: '98% On-Time',
+              },
+              {
+                icon: 'security',
+                title: 'Secure & Reliable',
+                description: 'We follow industry best practices to ensure your applications are secure and reliable.',
+                stat: '100% Secure',
+              },
+            ].map((feature, index) => (
+               <div
+                 key={index}
+                 className="flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-slate-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-xl group"
+               >
+                 <div className="flex items-center gap-4">
+                   <div className="w-14 h-14 rounded-xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-colors flex-shrink-0">
+                     <span className="material-symbols-outlined text-primary text-3xl">{feature.icon}</span>
+                   </div>
+                   <span className="text-xl font-bold text-primary flex-shrink-0">{feature.stat}</span>
+                 </div>
+                 <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">{feature.title}</h3>
+                 <p className="text-sm text-slate-600 dark:text-gray-400 leading-relaxed">{feature.description}</p>
+               </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Success Stories Section */}
+      <div className="py-12 md:py-20">
+        <div className="px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-4">
+              Success Stories
+            </h2>
+            <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              Real results from real clients
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                title: 'E-Commerce Platform',
+                client: 'RetailTech Inc.',
+                result: '300% increase in online sales',
+                description: 'We built a scalable e-commerce platform that handles millions of transactions daily with zero downtime.',
+                image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDU4yMBR_ekopvLmx8wyvjJ56bpT3XduiciMokV4nY8PVan2s9IZhpnFj8jxo_oO3r3daLvHedq5xgLpUi1wVvUThf0eMt5OkaPsEhKHEa7TChQ5B5H2arNh5VCEMEmxFQCwYrwWe8Z7vgz50mhhw0Mmbgm4xF-lLIrVqWDb6FFhqPv4fSPSFhe3NDqc3P7ZZsYLici736CfQodS2QEeIMq_cmEUGBlrWhev2MBv3_Nwtu_oFOtoXFegAIqF59MPBEL7zhQglrkoUHV',
+              },
+              {
+                title: 'Mobile Banking App',
+                client: 'FinanceFirst',
+                result: '500K+ active users',
+                description: 'A secure mobile banking solution with biometric authentication and real-time transactions.',
+                image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAn6F7aTYSMeLpsPRQty9H__lXFkQL8kCpiKDmeWsPq7_fPLiszsGEHxuYgYRWvvLL8AK9Mms9jefP5ivdffVy_e2MNh7E1EZgH2s--VHf1Sodr8y1gfUR7fNbCsmONxI-6TYSyLd__FSMWe220btDoScDNZHY80gCWI3aibsw0QuALS-LylOPt22ucZffzFUTyvf8LTjKH5Uq74ko4VrHTidK_6QM48Z1Xpjp9l-oMzVbl6KGpbIolJJ21Po3geUVX7ucP-6jC7HN_',
+              },
+            ].map((caseStudy, index) => (
+              <div
+                key={index}
+                className="flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-xl group overflow-hidden"
+              >
+                <div className="w-full h-48 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+                  <img
+                    src={caseStudy.image}
+                    alt={caseStudy.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">{caseStudy.title}</h3>
+                  <span className="text-primary text-sm font-bold bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-full">{caseStudy.client}</span>
+                </div>
+                <p className="text-sm text-slate-600 dark:text-gray-400 leading-relaxed">{caseStudy.description}</p>
+                <div className="flex items-center gap-3 pt-3 border-t border-gray-200 dark:border-[#282e39]">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center">
+                    <span className="material-symbols-outlined text-primary text-xl">trending_up</span>
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-500 dark:text-gray-500">Result</p>
+                    <p className="text-sm font-bold text-primary">{caseStudy.result}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center pt-8">
+            <Link to="/portfolio">
+              <button className="flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 mx-auto">
+                <span className="truncate">View All Case Studies</span>
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="py-12 md:py-20">
+        <div className="px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              Everything you need to know about our services
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto space-y-4">
+            {[
+              {
+                question: 'How long does a typical project take?',
+                answer: 'Project timelines vary based on scope and complexity. A simple website might take 4-6 weeks, while a complex enterprise application could take 3-6 months. We provide detailed timelines during the discovery phase.',
+                icon: 'schedule',
+              },
+              {
+                question: 'Do you provide ongoing support?',
+                answer: 'Yes, we offer comprehensive support packages including maintenance, updates, bug fixes, and feature enhancements. Our support team is available 24/7 for critical issues.',
+                icon: 'support_agent',
+              },
+              {
+                question: 'What technologies do you specialize in?',
+                answer: 'We work with a wide range of modern technologies including React, Vue.js, Node.js, Python, Swift, Kotlin, and cloud platforms like AWS, Azure, and GCP. We choose the best stack for each project.',
+                icon: 'code',
+              },
+              {
+                question: 'Can you work with our existing team?',
+                answer: 'Absolutely! We excel at collaborating with in-house teams. We can integrate seamlessly with your existing workflows and provide expertise where needed.',
+                icon: 'groups',
+              },
+            ].map((faq, index) => (
+              <div
+                key={index}
+                className="flex gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-lg group"
+              >
+                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 dark:bg-primary/20 flex items-center justify-center group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-colors">
+                  <span className="material-symbols-outlined text-primary text-2xl">{faq.icon}</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">{faq.question}</h3>
+                  <p className="text-sm text-slate-600 dark:text-gray-400 leading-relaxed">{faq.answer}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="py-16 md:py-24 bg-gradient-to-r from-primary to-primary/80 text-white rounded-xl mx-4 my-8">
+        <div className="flex flex-col items-center text-center px-4 max-w-3xl mx-auto">
+          <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center mb-6">
+            <span className="material-symbols-outlined text-white text-3xl">rocket_launch</span>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-bold leading-tight tracking-[-0.015em] mb-6">
+            Have an Idea? Let's Make it Real.
+          </h2>
+          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl">
+            Turn your vision into a reality with our expert team. We're ready to build the next big thing with you.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link to="/contact">
+              <button className="flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-8 bg-white text-primary text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95">
+                <span className="truncate">Schedule a Free Consultation</span>
+              </button>
+            </Link>
+            <Link to="/portfolio">
+              <button className="flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-8 bg-transparent border-2 border-white text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-white/10 transition-colors">
+                <span className="truncate">View Our Work</span>
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default Services
+
