@@ -138,21 +138,34 @@ const Services = () => {
       {/* Hero Section */}
       <div
         ref={heroRef}
-        className="relative py-16 md:py-24 overflow-hidden"
+        className="relative w-screen left-1/2 -translate-x-1/2 -mt-20 sm:-mt-24 md:-mt-28 lg:-mt-32 pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-32 md:pb-48 min-h-[85vh] md:min-h-[100vh] flex items-center justify-center overflow-hidden"
       >
-        <div className="flex flex-col gap-8 px-4 md:flex-row md:items-center md:gap-12 max-w-[1400px] mx-auto">
-          <div className={`flex flex-col gap-6 md:gap-8 flex-1 transition-all duration-1000 ${
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 w-full h-full bg-center bg-cover bg-no-repeat z-0"
+          style={{
+            backgroundImage: `url("/Service-bg-herosection.png")`,
+          }}
+          role="img"
+          aria-label="Services hero background"
+        />
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60 dark:from-black/60 dark:via-black/70 dark:to-black/80 z-10"></div>
+        
+        {/* Content */}
+        <div className="relative z-20 w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
+          <div className={`flex flex-col gap-6 md:gap-8 max-w-4xl transition-all duration-1000 ${
             isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
             <div className="flex flex-col gap-4">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 dark:bg-primary/20 rounded-full w-fit">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 dark:bg-primary/30 backdrop-blur-sm rounded-full w-fit border border-primary/30">
                 <span className="material-symbols-outlined text-primary text-lg">rocket_launch</span>
                 <span className="text-primary text-sm font-bold">Our Services</span>
               </div>
-              <h1 className="text-slate-900 dark:text-white text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.033em]">
+              <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.033em] drop-shadow-lg">
                 Building the Future, One Line of Code at a Time.
               </h1>
-              <p className="text-slate-600 dark:text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl">
+              <p className="text-white/90 dark:text-white/80 text-base md:text-lg leading-relaxed max-w-2xl drop-shadow-md">
                 MacrocosmTech delivers innovative and scalable software solutions tailored to your unique vision. We partner with you to turn ambitious ideas into reality.
               </p>
             </div>
@@ -163,22 +176,12 @@ const Services = () => {
                 </button>
               </Link>
               <Link to="/portfolio">
-                <button className="flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 bg-transparent border-2 border-primary text-primary text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/10 dark:hover:bg-primary/20 transition-all">
+                <button className="flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 bg-transparent border-2 border-white/80 text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-white/10 dark:hover:bg-white/20 transition-all backdrop-blur-sm">
                   <span className="truncate">View Our Work</span>
                 </button>
               </Link>
             </div>
           </div>
-          <div
-            className={`flex-1 w-full aspect-video bg-center bg-no-repeat bg-cover rounded-2xl shadow-2xl overflow-hidden transition-all duration-1000 ${
-              isHeroVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-            }`}
-            style={{
-              backgroundImage: `url("/Services-img.jpg")`,
-            }}
-            role="img"
-            aria-label="Services hero image representing our technology and development services"
-          />
         </div>
       </div>
 

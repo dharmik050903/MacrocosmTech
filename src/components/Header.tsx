@@ -76,70 +76,71 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-[100] w-full flex items-center justify-center transition-all duration-300 ${
+        className={`fixed top-4 left-1/2 -translate-x-1/2 z-[100] w-[95%] sm:w-[92%] md:w-[90%] lg:w-[85%] max-w-[1400px] flex items-center justify-between transition-all duration-300 rounded-[32px] ${
           scrolled
-            ? 'bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-xl border-b border-gray-200/30 dark:border-[#282e39]/30 shadow-lg py-3 sm:py-3.5 md:py-4'
-            : 'bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-lg border-b border-gray-200/20 dark:border-[#282e39]/20 shadow-md py-3.5 sm:py-4 md:py-5'
+            ? 'bg-slate-600/60 dark:bg-slate-700/60 backdrop-blur-xl border border-gray-400/30 dark:border-gray-300/30 shadow-2xl py-4 sm:py-4.5 md:py-5'
+            : 'bg-slate-600/55 dark:bg-slate-700/55 backdrop-blur-lg border border-gray-400/20 dark:border-gray-300/20 shadow-xl py-4.5 sm:py-5 md:py-6'
         }`}
       >
-        <div className="w-full max-w-[1400px] px-4 sm:px-6 md:px-8 lg:px-10 flex items-center justify-between gap-3 sm:gap-4 md:gap-6">
-          <Link to="/" className="flex items-center gap-2 sm:gap-3 group flex-shrink-0">
-            <div className="size-8 sm:size-9 md:size-10 flex items-center justify-center rounded-lg bg-primary/10 dark:bg-primary/20 group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-colors flex-shrink-0">
+        <div className="w-full px-5 sm:px-6 md:px-7 lg:px-9 flex items-center justify-between gap-3 sm:gap-4 md:gap-6">
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-2.5 sm:gap-3 group flex-shrink-0">
+            <div className="size-10 sm:size-11 md:size-12 flex items-center justify-center rounded-lg bg-primary/20 dark:bg-primary/30 group-hover:bg-primary/30 dark:group-hover:bg-primary/40 transition-colors flex-shrink-0">
               <Logo />
             </div>
-            <h2 className="text-slate-900 dark:text-white text-base sm:text-lg md:text-xl font-bold leading-tight tracking-[-0.015em] group-hover:text-primary dark:group-hover:text-primary transition-colors whitespace-nowrap">
+            <h2 className="text-white text-lg sm:text-xl md:text-2xl font-bold leading-tight tracking-[-0.015em] group-hover:text-primary transition-colors whitespace-nowrap">
               MacrocosmTech
             </h2>
           </Link>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex flex-1 justify-end gap-4 lg:gap-6 items-center min-w-0">
-          <nav className="flex items-center gap-0.5 lg:gap-1" aria-label="Main navigation">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`relative text-xs lg:text-sm font-medium leading-normal px-2 lg:px-4 py-2 rounded-lg transition-all duration-200 whitespace-nowrap ${
-                  isActive(item.path)
-                    ? 'text-primary dark:text-primary font-bold'
-                    : 'text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5'
-                }`}
-              >
-                {item.label}
-                {isActive(item.path) && (
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-primary"></span>
-                )}
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex flex-1 justify-end items-center gap-1 lg:gap-2 min-w-0">
+            <nav className="flex items-center gap-0.5 lg:gap-1" aria-label="Main navigation">
+              {navItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={`relative text-base lg:text-lg font-medium leading-normal px-4 lg:px-5 py-2.5 rounded-lg transition-all duration-200 whitespace-nowrap ${
+                    isActive(item.path)
+                      ? 'text-primary font-semibold'
+                      : 'text-white/90 hover:text-white hover:bg-white/5'
+                  }`}
+                >
+                  {item.label}
+                  {isActive(item.path) && (
+                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  )}
+                </Link>
+              ))}
+            </nav>
+            <div className="flex gap-3 items-center ml-2 lg:ml-4 pl-3 lg:pl-4 border-l border-gray-600/50 dark:border-gray-500/50">
+              <Link to="/contact">
+                <button className="flex min-w-[120px] lg:min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-11 lg:h-12 px-5 lg:px-6 bg-primary text-white text-base lg:text-lg font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95">
+                  <span className="truncate">Get a Quote</span>
+                </button>
               </Link>
-            ))}
-          </nav>
-          <div className="flex gap-2 items-center ml-2 lg:ml-4 pl-2 lg:pl-4 border-l border-gray-200 dark:border-[#282e39]">
-            <Link to="/contact">
-              <button className="flex min-w-[90px] lg:min-w-[100px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-9 lg:h-10 px-3 lg:px-5 bg-gradient-to-r from-primary to-primary/80 text-white text-xs lg:text-sm font-bold leading-normal tracking-[0.015em] hover:from-primary/90 hover:to-primary/70 transition-all shadow-md hover:shadow-lg hover:scale-105 active:scale-95">
-                <span className="truncate">Get a Quote</span>
+              <button
+                onClick={toggleTheme}
+                className="flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-11 w-11 lg:h-12 lg:w-12 bg-gray-700/80 dark:bg-gray-600/80 text-white hover:bg-gray-600 dark:hover:bg-gray-500 transition-all hover:scale-110 active:scale-95 flex-shrink-0 border border-gray-600/50"
+                aria-label="Toggle dark mode"
+              >
+                <span className="material-symbols-outlined text-xl lg:text-2xl dark:hidden">dark_mode</span>
+                <span className="material-symbols-outlined text-xl lg:text-2xl hidden dark:inline">light_mode</span>
               </button>
-            </Link>
-            <button
-              onClick={toggleTheme}
-              className="flex cursor-pointer items-center justify-center overflow-hidden rounded-xl h-9 lg:h-10 w-9 lg:w-10 bg-slate-200 dark:bg-[#282e39] text-slate-900 dark:text-white hover:bg-slate-300 dark:hover:bg-[#1e2533] transition-all hover:scale-110 active:scale-95 flex-shrink-0"
-              aria-label="Toggle dark mode"
-            >
-              <span className="material-symbols-outlined text-lg lg:text-xl dark:hidden">dark_mode</span>
-              <span className="material-symbols-outlined text-lg lg:text-xl hidden dark:inline">light_mode</span>
-            </button>
+            </div>
           </div>
-        </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 sm:h-11 w-10 sm:w-11 bg-slate-200 dark:bg-[#282e39] text-slate-900 dark:text-white hover:bg-slate-300 dark:hover:bg-[#1e2533] transition-all active:scale-95 flex-shrink-0"
-          aria-label="Toggle menu"
-          aria-expanded={mobileMenuOpen}
-        >
-          <span className="material-symbols-outlined text-xl sm:text-2xl">
-            {mobileMenuOpen ? 'close' : 'menu'}
-          </span>
-        </button>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 sm:h-12 w-11 sm:w-12 bg-gray-700/80 dark:bg-gray-600/80 text-white hover:bg-gray-600 dark:hover:bg-gray-500 transition-all active:scale-95 flex-shrink-0 border border-gray-600/50"
+            aria-label="Toggle menu"
+            aria-expanded={mobileMenuOpen}
+          >
+            <span className="material-symbols-outlined text-2xl sm:text-3xl">
+              {mobileMenuOpen ? 'close' : 'menu'}
+            </span>
+          </button>
         </div>
       </header>
 
@@ -153,23 +154,23 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-[85%] sm:w-80 max-w-sm bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-xl z-[100] shadow-2xl md:hidden transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-full w-[85%] sm:w-80 max-w-sm bg-slate-900/95 dark:bg-slate-950/95 backdrop-blur-xl z-[100] shadow-2xl md:hidden transform transition-transform duration-300 border-l border-gray-700/50 ${
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         <div className="flex flex-col h-full p-4 sm:p-6 overflow-y-auto">
-          <div className="flex items-center justify-between mb-6 sm:mb-8 pb-4 sm:pb-6 border-b border-gray-200 dark:border-[#282e39]">
-            <Link to="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 sm:gap-3 min-w-0">
-              <div className="size-7 sm:size-8 flex items-center justify-center rounded-lg bg-primary/10 dark:bg-primary/20 flex-shrink-0">
+          <div className="flex items-center justify-between mb-6 sm:mb-8 pb-4 sm:pb-6 border-b border-gray-700/50">
+            <Link to="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+              <div className="size-8 sm:size-9 flex items-center justify-center rounded-lg bg-primary/20 dark:bg-primary/30 flex-shrink-0">
                 <Logo />
               </div>
               <div className="flex flex-col min-w-0">
-                <h2 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white truncate">MacrocosmTech</h2>
+                <h2 className="text-base sm:text-lg font-bold text-white truncate">MacrocosmTech</h2>
               </div>
             </Link>
             <button
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-lg text-slate-900 dark:text-white hover:bg-gray-100 dark:hover:bg-white/5 transition-colors flex-shrink-0"
+              className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-lg text-white hover:bg-gray-800/80 dark:hover:bg-gray-700/80 transition-colors flex-shrink-0 border border-gray-700/50"
               aria-label="Close menu"
             >
               <span className="material-symbols-outlined text-xl sm:text-2xl">close</span>
@@ -184,8 +185,8 @@ const Header = () => {
                 onClick={() => setMobileMenuOpen(false)}
                 className={`relative text-sm sm:text-base font-medium leading-normal py-2.5 sm:py-3 px-3 sm:px-4 rounded-lg transition-all ${
                   isActive(item.path)
-                    ? 'text-primary dark:text-primary font-bold bg-primary/10 dark:bg-primary/20'
-                    : 'text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5'
+                    ? 'text-primary font-semibold bg-primary/20 dark:bg-primary/30'
+                    : 'text-white/90 hover:text-white hover:bg-white/5'
                 }`}
               >
                 {item.label}
@@ -196,15 +197,15 @@ const Header = () => {
             ))}
           </nav>
 
-          <div className="flex flex-col gap-2 sm:gap-3 mt-auto pt-4 sm:pt-6 border-t border-gray-200 dark:border-[#282e39]">
+          <div className="flex flex-col gap-2 sm:gap-3 mt-auto pt-4 sm:pt-6 border-t border-gray-700/50">
             <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
-              <button className="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-11 sm:h-12 px-4 bg-gradient-to-r from-primary to-primary/80 text-white text-sm font-bold leading-normal tracking-[0.015em] hover:from-primary/90 hover:to-primary/70 transition-all shadow-md hover:shadow-lg">
+              <button className="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-11 sm:h-12 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl">
                 <span className="truncate">Get a Quote</span>
               </button>
             </Link>
             <button
               onClick={toggleTheme}
-              className="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-11 sm:h-12 px-4 bg-slate-200 dark:bg-[#282e39] text-slate-900 dark:text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-slate-300 dark:hover:bg-[#1e2533] transition-colors"
+              className="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-11 sm:h-12 px-4 bg-gray-800/80 dark:bg-gray-700/80 text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors border border-gray-700/50"
               aria-label="Toggle dark mode"
             >
               <span className="material-symbols-outlined text-lg sm:text-xl dark:hidden">dark_mode</span>
