@@ -76,19 +76,19 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-4 left-1/2 -translate-x-1/2 z-[100] w-[95%] sm:w-[92%] md:w-[90%] lg:w-[85%] max-w-[1400px] flex items-center justify-between transition-all duration-300 rounded-[32px] ${
+        className={`fixed top-2 left-1/2 -translate-x-1/2 z-[100] w-[98%] xs:w-[96%] sm:w-[92%] md:w-[90%] lg:w-[85%] max-w-[1400px] flex items-center justify-between transition-all duration-300 rounded-2xl sm:rounded-[32px] ${
           scrolled
-            ? 'bg-slate-600/60 dark:bg-slate-700/60 backdrop-blur-xl border border-gray-400/30 dark:border-gray-300/30 shadow-2xl py-4 sm:py-4.5 md:py-5'
-            : 'bg-slate-600/55 dark:bg-slate-700/55 backdrop-blur-lg border border-gray-400/20 dark:border-gray-300/20 shadow-xl py-4.5 sm:py-5 md:py-6'
+            ? 'bg-slate-600/60 dark:bg-slate-700/60 backdrop-blur-xl border border-gray-400/30 dark:border-gray-300/30 shadow-2xl py-2.5 sm:py-4 md:py-5'
+            : 'bg-slate-600/55 dark:bg-slate-700/55 backdrop-blur-lg border border-gray-400/20 dark:border-gray-300/20 shadow-xl py-3 sm:py-4.5 md:py-6'
         }`}
       >
-        <div className="w-full px-5 sm:px-6 md:px-7 lg:px-9 flex items-center justify-between gap-3 sm:gap-4 md:gap-6">
+        <div className="w-full px-3 xs:px-4 sm:px-6 md:px-7 lg:px-9 flex items-center justify-between gap-2 xs:gap-3 sm:gap-4 md:gap-6">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5 sm:gap-3 group flex-shrink-0">
-            <div className="size-10 sm:size-11 md:size-12 flex items-center justify-center rounded-lg bg-primary/20 dark:bg-primary/30 group-hover:bg-primary/30 dark:group-hover:bg-primary/40 transition-colors flex-shrink-0">
+          <Link to="/" className="flex items-center gap-1.5 xs:gap-2 sm:gap-2.5 md:gap-3 group flex-shrink-0 min-w-0">
+            <div className="size-8 xs:size-9 sm:size-10 md:size-11 lg:size-12 flex items-center justify-center rounded-lg bg-primary/20 dark:bg-primary/30 group-hover:bg-primary/30 dark:group-hover:bg-primary/40 transition-colors flex-shrink-0">
               <Logo />
             </div>
-            <h2 className="text-white text-lg sm:text-xl md:text-2xl font-bold leading-tight tracking-[-0.015em] group-hover:text-primary transition-colors whitespace-nowrap">
+            <h2 className="text-white text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold leading-tight tracking-[-0.015em] group-hover:text-primary transition-colors whitespace-nowrap truncate">
               MacrocosmTech
             </h2>
           </Link>
@@ -133,11 +133,11 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 sm:h-12 w-11 sm:w-12 bg-gray-700/80 dark:bg-gray-600/80 text-white hover:bg-gray-600 dark:hover:bg-gray-500 transition-all active:scale-95 flex-shrink-0 border border-gray-600/50"
+            className="md:hidden flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 xs:h-10 sm:h-11 w-9 xs:w-10 sm:w-11 bg-gray-700/80 dark:bg-gray-600/80 text-white hover:bg-gray-600 dark:hover:bg-gray-500 transition-all active:scale-95 flex-shrink-0 border border-gray-600/50"
             aria-label="Toggle menu"
             aria-expanded={mobileMenuOpen}
           >
-            <span className="material-symbols-outlined text-2xl sm:text-3xl">
+            <span className="material-symbols-outlined text-xl xs:text-2xl sm:text-2xl">
               {mobileMenuOpen ? 'close' : 'menu'}
             </span>
           </button>

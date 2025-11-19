@@ -58,20 +58,41 @@ const Portfolio = () => {
         description="We build stunning, high-performance web and mobile applications that captivate users and drive results. Explore our portfolio of work including web apps, mobile apps, and branding projects."
         path="/portfolio"
       />
-      <main className="flex flex-col gap-10 md:gap-16 lg:gap-20 py-10">
-        <div className="@container">
-          <div className="flex flex-col gap-6 px-4 py-10 @[480px]:gap-8 items-center text-center">
-            <div className="flex flex-col gap-4">
-              <h1 className="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[864px]:text-6xl">
-                Crafting Digital Universes
-              </h1>
-              <h2 className="text-slate-600 dark:text-slate-400 text-base font-normal leading-normal @[480px]:text-lg max-w-2xl mx-auto">
-                We build stunning, high-performance web and mobile applications that captivate users and drive results. Explore our portfolio of work.
-              </h2>
+      <main className="flex flex-col gap-10 md:gap-16 lg:gap-20">
+        {/* Hero Section */}
+        <div 
+          className="relative w-screen left-1/2 -translate-x-1/2 -mt-20 sm:-mt-24 md:-mt-28 lg:-mt-32 pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-16 sm:pb-20 md:pb-24 lg:pb-32 min-h-[70vh] sm:min-h-[80vh] md:min-h-[90vh] lg:min-h-screen flex items-center justify-center overflow-hidden"
+          style={{ minHeight: '100vh' }}
+        >
+          {/* Background Image */}
+          <div
+            className="absolute inset-0 w-full h-full bg-center bg-cover bg-no-repeat z-0"
+            style={{
+              backgroundImage: `url("/close-up-keyboard-used-by-software-engineer-programming-home.jpg")`,
+              backgroundPosition: 'center center',
+              backgroundSize: 'cover',
+            }}
+            role="img"
+            aria-label="Portfolio hero background - Close-up keyboard used by software engineer programming"
+          />
+          {/* Overlay for better text readability - Different opacity for light and dark mode */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/70 dark:from-black/40 dark:via-black/50 dark:to-black/60 z-10"></div>
+          
+          {/* Content */}
+          <div className="relative z-20 w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
+            <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto items-center text-center">
+              <div className="flex flex-col gap-3 sm:gap-4">
+                <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.033em] drop-shadow-lg px-2">
+                  Crafting Digital Universes
+                </h1>
+                <h2 className="text-white/90 dark:text-white/80 text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl mx-auto drop-shadow-md px-2">
+                  We build stunning, high-performance web and mobile applications that captivate users and drive results. Explore our portfolio of work.
+                </h2>
+              </div>
+              <button className="flex min-w-[100px] sm:min-w-[120px] w-fit max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 sm:h-12 px-4 sm:px-6 bg-primary text-white text-sm sm:text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95">
+                <span className="truncate">Our Work</span>
+              </button>
             </div>
-            <button className="flex min-w-[84px] w-fit max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base hover:opacity-90 transition-opacity">
-              <span className="truncate">Our Work</span>
-            </button>
           </div>
         </div>
 
