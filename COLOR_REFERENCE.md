@@ -1,6 +1,6 @@
-# MacrocosmTech - Color Reference Guide
+# Zeeniith - Color Reference Guide
 
-This document provides the complete color palette used in the MacrocosmTech website. Use these colors to create a logo that matches the brand identity.
+This document provides the complete color palette used in the Zeeniith website. Use these colors to create a logo that matches the brand identity.
 
 ## 🎨 Primary Brand Colors
 

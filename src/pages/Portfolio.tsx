@@ -1,9 +1,37 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('All')
+  const heroRef = useRef<HTMLDivElement>(null)
+  const [isHeroVisible, setIsHeroVisible] = useState(false)
+
+  // Hero animation observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsHeroVisible(true)
+          }
+        })
+      },
+      {
+        threshold: 0.3,
+      }
+    )
+
+    if (heroRef.current) {
+      observer.observe(heroRef.current)
+    }
+
+    return () => {
+      if (heroRef.current) {
+        observer.unobserve(heroRef.current)
+      }
+    }
+  }, [])
 
   const filters = ['All', 'Web App', 'Mobile', 'Branding', 'UI/UX']
 
@@ -54,13 +82,14 @@ const Portfolio = () => {
   return (
     <>
       <SEO
-        title="Portfolio - MacrocosmTech | Our Work & Projects"
+        title="Portfolio - Zeeniith | Our Work & Projects"
         description="We build stunning, high-performance web and mobile applications that captivate users and drive results. Explore our portfolio of work including web apps, mobile apps, and branding projects."
         path="/portfolio"
       />
       <main className="flex flex-col gap-10 md:gap-16 lg:gap-20">
         {/* Hero Section */}
         <div 
+          ref={heroRef}
           className="relative w-screen left-1/2 -translate-x-1/2 -mt-20 sm:-mt-24 md:-mt-28 lg:-mt-32 pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-16 sm:pb-20 md:pb-24 lg:pb-32 min-h-[70vh] sm:min-h-[80vh] md:min-h-[90vh] lg:min-h-screen flex items-center justify-center overflow-hidden"
           style={{ minHeight: '100vh' }}
         >
@@ -80,7 +109,9 @@ const Portfolio = () => {
           
           {/* Content */}
           <div className="relative z-20 w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
-            <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto items-center text-center">
+            <div className={`flex flex-col gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto items-center text-center transition-all duration-1000 ${
+              isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
               <div className="flex flex-col gap-3 sm:gap-4">
                 <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.033em] drop-shadow-lg px-2">
                   Crafting Digital Universes
@@ -147,7 +178,7 @@ const Portfolio = () => {
                 Client Testimonial
               </p>
               <p className="text-slate-800 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] @[480px]:text-2xl">
-                MacrocosmTech didn't just build a product; they crafted an experience. Their attention to detail is exceptional.
+                Zeeniith didn't just build a product; they crafted an experience. Their attention to detail is exceptional.
               </p>
               <div className="flex items-end gap-3 justify-between pt-2">
                 <p className="text-slate-600 dark:text-slate-400 text-base font-normal leading-normal">
@@ -255,19 +286,19 @@ const Portfolio = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
             {[
               {
-                quote: 'MacrocosmTech exceeded our expectations. The team was professional, responsive, and delivered exactly what we needed.',
+                quote: 'Zeeniith exceeded our expectations. The team was professional, responsive, and delivered exactly what we needed.',
                 author: 'Emily Rodriguez',
                 role: 'Product Manager',
                 company: 'TechCorp',
               },
               {
-                quote: 'Working with MacrocosmTech was seamless. They understood our vision and brought it to life beautifully.',
+                quote: 'Working with Zeeniith was seamless. They understood our vision and brought it to life beautifully.',
                 author: 'James Wilson',
                 role: 'Founder',
                 company: 'StartupHub',
               },
               {
-                quote: 'The quality of work and attention to detail is outstanding. Highly recommend MacrocosmTech for any project.',
+                quote: 'The quality of work and attention to detail is outstanding. Highly recommend Zeeniith for any project.',
                 author: 'Lisa Anderson',
                 role: 'CTO',
                 company: 'InnovateLabs',

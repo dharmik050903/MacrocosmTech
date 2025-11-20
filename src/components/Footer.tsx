@@ -27,7 +27,7 @@ const Footer = () => {
             <Logo />
           </div>
           <Link to="/">
-            <h2 className="text-base font-bold leading-tight tracking-[-0.015em]">MacrocosmTech</h2>
+            <h2 className="text-base font-bold leading-tight tracking-[-0.015em]">Zeeniith</h2>
           </Link>
         </div>
         <div className="flex gap-6">
@@ -59,7 +59,7 @@ const Footer = () => {
             GitHub
           </a>
         </div>
-        <p>© {new Date().getFullYear()} MacrocosmTech. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Zeeniith. All rights reserved.</p>
       </div>
     </footer>
   )

@@ -58,7 +58,7 @@ const SEO = ({ title, description, path = '', image = '' }: SEOProps) => {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'MacrocosmTech',
+    name: 'Zeeniith',
     url: siteUrl,
     logo: `${siteUrl}/logo.png`,
     description: 'We build digital universes. A software agency dedicated to creating innovative solutions.',

@@ -30,8 +30,8 @@ const Contact = () => {
   return (
     <>
       <SEO
-        title="Contact Us - MacrocosmTech | Let's Build Something Amazing"
-        description="Have a project in mind? We'd love to hear about it. Contact MacrocosmTech to discuss your software development needs. Get in touch via email, phone, or our contact form."
+        title="Contact Us - Zeeniith | Let's Build Something Amazing"
+        description="Have a project in mind? We'd love to hear about it. Contact Zeeniith to discuss your software development needs. Get in touch via email, phone, or our contact form."
         path="/contact"
       />
       <main className="flex-grow">
@@ -176,7 +176,7 @@ const Contact = () => {
                   referrerPolicy="no-referrer-when-downgrade"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.225578399991!2d-122.4194156846817!3d37.77492957975991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c1a1f3373%3A0x1b41505c040a69a!2sSan%20Francisco%20City%20Hall!5e0!3m2!1sen!2sus!4v1678886400000!5m2!1sen!2sus"
                   style={{ border: 0 }}
-                  title="MacrocosmTech Location"
+                  title="Zeeniith Location"
                 />
               </div>
               <div>

@@ -127,7 +127,7 @@ const Home = () => {
   return (
     <>
       <SEO
-        title="MacrocosmTech - We Build Digital Universes"
+        title="Zeeniith - We Build Digital Universes"
         description="We build digital universes. UI/UX Design, Web Apps, Mobile Experiences, and Branding. Explore our work and let's create something amazing together."
         path="/"
       />
@@ -170,13 +170,13 @@ const Home = () => {
                   Web Apps
                 </h2>
                 <h2 className="text-base font-normal leading-normal md:text-lg h-8 md:h-10 flex items-center text-white/90 drop-shadow-md">
-                  Mobile Experiences
+                  Application Development
                 </h2>
                 <h2 className="text-base font-normal leading-normal md:text-lg h-8 md:h-10 flex items-center text-white/90 drop-shadow-md">
-                  Branding
+                  Digital Marketing
                 </h2>
                 <h2 className="text-base font-normal leading-normal md:text-lg h-8 md:h-10 flex items-center text-white/90 drop-shadow-md">
-                  UI/UX Design
+                  Customise Softwares Solution
                 </h2>
               </div>
             </div>
@@ -405,7 +405,7 @@ const Home = () => {
       <div className="py-12 md:py-20 bg-primary/5 dark:bg-primary/10 rounded-xl mx-4 my-8">
         <div className="text-center mb-12 px-4">
           <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-4">
-            Why Choose MacrocosmTech
+            Why Choose Zeeniith
           </h2>
           <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             We're not just developers—we're your partners in digital transformation.
@@ -478,13 +478,13 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
           {[
             {
-              quote: "MacrocosmTech transformed our business with their innovative approach. The team's expertise and dedication are unmatched.",
+              quote: "Zeeniith transformed our business with their innovative approach. The team's expertise and dedication are unmatched.",
               author: 'Sarah Johnson',
               role: 'CEO, TechStart Inc.',
               image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDqpQqF66IwQIaIrIO73eMBSFTweSiRXQ1Ez3AkCheIy7lrQs4lZI8vCvrbdyRKCKdIBmmbtilT9jBx1SETh9c4lxNZO90Nbr1x7UUBznn7vKDlQWzVWOzQRg4Gj4TZkHoJogGNdpFUIoy8o0vk1aFrHrmc7C6cYZ38elWPXlNb0bqjJkPvvI6WykpJSGy1vQrCdetStv904u9AjsA5nbykMlShhJh54yhIvOVzGFr7wTv9rm64ZdlcgcTCrbFHlR1V87OL-BpiJLlG',
             },
             {
-              quote: "Working with MacrocosmTech was a game-changer. They delivered beyond our expectations and continue to support us every step of the way.",
+              quote: "Working with Zeeniith was a game-changer. They delivered beyond our expectations and continue to support us every step of the way.",
               author: 'Michael Chen',
               role: 'CTO, InnovateLabs',
               image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBUJCPHqoaSKTPucwg5Hu9K91-lFhT--r-S6F6upjVgTfIaMeYLOH_pm_VDhJD-mJ1bK9B_mOuuX9RIdsDZcsuSD1mFSKbvd0chPYXm5yqq51gG_Er0i_rCAyRrLUvOSz74iapwLe-OlxBv9jFEVnRkLA56d5mX-PQO1fM_TdAfTVVTElzPjnwbBGinmUywQKH4c3JNNd0UHjangcSvoHvcNTLtsgAMY0g4Rq1DMIfi7qnHzuABg1e1S_wfxV74-KzXOtSLrDq46STU',

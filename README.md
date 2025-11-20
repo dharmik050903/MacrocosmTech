@@ -1,6 +1,6 @@
-# MacrocosmTech Website
+# Zeeniith Website
 
-A modern, responsive React + TypeScript website for MacrocosmTech - a software agency that builds digital universes.
+A modern, responsive React + TypeScript website for Zeeniith - a software agency that builds digital universes.
 
 ## 🚀 Features
 
@@ -17,7 +17,7 @@ A modern, responsive React + TypeScript website for MacrocosmTech - a software a
 ## 📁 Project Structure
 
 ```
-MacrocosmTech/
+Zeeniith/
 ├── src/
 │   ├── components/
 │   │   ├── Header.tsx      # Unified header with mobile menu
@@ -51,7 +51,7 @@ MacrocosmTech/
 
 1. Navigate to the project directory:
    ```bash
-   cd Galaxy-website/MacrocosmTech
+   cd Galaxy-website/Zeeniith
    ```
 
 2. Install dependencies:

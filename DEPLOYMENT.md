@@ -1,8 +1,8 @@
-# Deployment Guide for MacrocosmTech
+# Deployment Guide for Zeeniith
 
 ## 🚀 Deploying to Vercel
 
-This guide will help you deploy the MacrocosmTech website to Vercel.
+This guide will help you deploy the Zeeniith website to Vercel.
 
 ### Prerequisites
 - A GitHub account
@@ -10,13 +10,13 @@ This guide will help you deploy the MacrocosmTech website to Vercel.
 
 ### Step 1: Initialize Git Repository
 
-If you haven't already, initialize a git repository in the MacrocosmTech folder:
+If you haven't already, initialize a git repository in the Zeeniith folder:
 
 ```bash
-cd Galaxy-website/MacrocosmTech
+cd Galaxy-website/Zeeniith
 git init
 git add .
-git commit -m "Initial commit: MacrocosmTech website"
+git commit -m "Initial commit: Zeeniith website"
 ```
 
 ### Step 2: Create GitHub Repository
@@ -54,7 +54,7 @@ Replace `YOUR_USERNAME` with your GitHub username.
 ```bash
 npm i -g vercel
 vercel login
-cd Galaxy-website/MacrocosmTech
+cd Galaxy-website/Zeeniith
 vercel
 ```
 

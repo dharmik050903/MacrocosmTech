@@ -131,8 +131,8 @@ const Services = () => {
   return (
     <>
       <SEO
-        title="Services - MacrocosmTech | Software Development Services"
-        description="MacrocosmTech delivers innovative and scalable software solutions tailored to your unique vision. Web apps, mobile apps, UI/UX design, cloud solutions, and AI/ML services."
+        title="Services - Zeeniith | Software Development Services"
+        description="Zeeniith delivers innovative and scalable software solutions tailored to your unique vision. Web apps, mobile apps, UI/UX design, cloud solutions, and AI/ML services."
         path="/services"
       />
       {/* Hero Section */}
@@ -166,7 +166,7 @@ const Services = () => {
                 Building the Future, One Line of Code at a Time.
               </h1>
               <p className="text-white/90 dark:text-white/80 text-base md:text-lg leading-relaxed max-w-2xl drop-shadow-md">
-                MacrocosmTech delivers innovative and scalable software solutions tailored to your unique vision. We partner with you to turn ambitious ideas into reality.
+                Zeeniith delivers innovative and scalable software solutions tailored to your unique vision. We partner with you to turn ambitious ideas into reality.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">

@@ -30,6 +30,7 @@ const Header = () => {
     { path: '/', label: 'Home' },
     { path: '/services', label: 'Services' },
     { path: '/portfolio', label: 'Work' },
+    { path: '/blog', label: 'Insights' },
     { path: '/about', label: 'About' },
     { path: '/contact', label: 'Contact' },
   ]
@@ -89,7 +90,7 @@ const Header = () => {
               <Logo />
             </div>
             <h2 className="text-white text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold leading-tight tracking-[-0.015em] group-hover:text-primary transition-colors whitespace-nowrap truncate">
-              MacrocosmTech
+              Zeeniith
             </h2>
           </Link>
 
@@ -165,7 +166,7 @@ const Header = () => {
                 <Logo />
               </div>
               <div className="flex flex-col min-w-0">
-                <h2 className="text-base sm:text-lg font-bold text-white truncate">MacrocosmTech</h2>
+                <h2 className="text-base sm:text-lg font-bold text-white truncate">Zeeniith</h2>
               </div>
             </Link>
             <button
