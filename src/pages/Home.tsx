@@ -133,8 +133,13 @@ const Home = () => {
       />
       <div
         ref={heroRef}
-        className="relative w-screen left-1/2 -translate-x-1/2 -mt-20 sm:-mt-24 md:-mt-28 lg:-mt-32 pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-20 md:pb-32 min-h-screen flex items-center justify-center overflow-hidden z-0"
-        style={{ minHeight: '100vh' }}
+        className="hero-section relative -mx-4 xs:-mx-6 sm:-mx-8 md:-mx-12 lg:-mx-16 xl:-mx-20 2xl:-mx-24 -mt-20 sm:-mt-24 md:-mt-28 lg:-mt-32 pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-20 md:pb-32 min-h-screen flex items-center justify-center overflow-hidden z-0"
+        style={{ 
+          minHeight: '100vh',
+          width: '100vw',
+          marginLeft: 'calc(-50vw + 50%)',
+          marginRight: 'calc(-50vw + 50%)',
+        }}
       >
         {/* Video Background with Zoom Effect */}
         <video
@@ -142,47 +147,55 @@ const Home = () => {
           loop
           muted
           playsInline
-          className={`absolute top-0 left-0 w-screen h-full object-cover z-0 ${
+          className={`absolute top-0 left-0 w-full h-full object-cover z-0 pointer-events-none ${
             isVisible ? 'video-zoom-in' : 'scale-[1.3]'
           }`}
-          style={{ height: '100%' }}
+          style={{ 
+            height: '100%',
+            width: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center',
+          }}
         >
           <source src="/bg-home.mp4" type="video/mp4" />
         </video>
         {/* Overlay for better text readability */}
-        <div className="absolute top-0 left-0 w-full h-full bg-black/40 dark:bg-black/60 z-10"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-black/40 dark:bg-black/60 z-10 pointer-events-none"></div>
         {/* Content */}
         <div
-          className={`relative z-20 flex min-h-[480px] flex-col gap-6 items-center justify-center text-center p-4 ${
+          className={`relative z-20 flex min-h-[400px] xs:min-h-[480px] sm:min-h-[520px] md:min-h-[600px] lg:min-h-[650px] xl:min-h-[700px] flex-col gap-4 xs:gap-5 sm:gap-6 md:gap-8 items-center justify-center text-center p-4 xs:p-6 sm:p-8 md:p-10 ${
             isVisible ? 'content-fade-in' : 'opacity-0'
           }`}
         >
-          <div className="flex flex-col gap-4">
-            <h1 className="text-4xl font-bold leading-tight tracking-[-0.033em] md:text-6xl text-white drop-shadow-lg">
+          <div className="flex flex-col gap-3 xs:gap-4 sm:gap-5 md:gap-6">
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight tracking-[-0.033em] text-white drop-shadow-lg px-2">
               We Build Digital Universes.
             </h1>
-            <div className="h-8 md:h-10 text-center overflow-hidden">
-              <div className="animate-ticker flex flex-col items-center">
-                <h2 className="text-base font-normal leading-normal md:text-lg h-8 md:h-10 flex items-center text-white/90 drop-shadow-md">
+            <div className="h-7 xs:h-8 sm:h-9 md:h-10 lg:h-12 text-center overflow-hidden relative">
+              <div className="animate-ticker flex flex-col items-center justify-center">
+                <h2 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-normal h-7 xs:h-8 sm:h-9 md:h-10 lg:h-12 flex items-center justify-center text-white/90 drop-shadow-md whitespace-nowrap">
                   UI/UX Design
                 </h2>
-                <h2 className="text-base font-normal leading-normal md:text-lg h-8 md:h-10 flex items-center text-white/90 drop-shadow-md">
+                <h2 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-normal h-7 xs:h-8 sm:h-9 md:h-10 lg:h-12 flex items-center justify-center text-white/90 drop-shadow-md whitespace-nowrap">
                   Web Apps
                 </h2>
-                <h2 className="text-base font-normal leading-normal md:text-lg h-8 md:h-10 flex items-center text-white/90 drop-shadow-md">
+                <h2 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-normal h-7 xs:h-8 sm:h-9 md:h-10 lg:h-12 flex items-center justify-center text-white/90 drop-shadow-md whitespace-nowrap">
                   Application Development
                 </h2>
-                <h2 className="text-base font-normal leading-normal md:text-lg h-8 md:h-10 flex items-center text-white/90 drop-shadow-md">
+                <h2 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-normal h-7 xs:h-8 sm:h-9 md:h-10 lg:h-12 flex items-center justify-center text-white/90 drop-shadow-md whitespace-nowrap">
                   Digital Marketing
                 </h2>
-                <h2 className="text-base font-normal leading-normal md:text-lg h-8 md:h-10 flex items-center text-white/90 drop-shadow-md">
+                <h2 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-normal h-7 xs:h-8 sm:h-9 md:h-10 lg:h-12 flex items-center justify-center text-white/90 drop-shadow-md whitespace-nowrap">
                   Customise Softwares Solution
+                </h2>
+                <h2 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-normal h-7 xs:h-8 sm:h-9 md:h-10 lg:h-12 flex items-center justify-center text-white/90 drop-shadow-md whitespace-nowrap">
+                  UI/UX Design
                 </h2>
               </div>
             </div>
           </div>
           <Link to="/portfolio">
-            <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-5 md:h-14 md:px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity shadow-lg">
+            <button className="flex min-w-[120px] xs:min-w-[140px] sm:min-w-[160px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 xs:h-11 sm:h-12 md:h-14 lg:h-16 px-4 xs:px-5 sm:px-6 md:px-8 bg-primary text-white text-sm xs:text-base sm:text-lg md:text-xl font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity shadow-lg">
               <span className="truncate">Explore Our Work</span>
             </button>
           </Link>
@@ -266,11 +279,11 @@ const Home = () => {
         </div>
       </div> */}
 
-      <div className="py-12 md:py-20">
-        <h2 className="text-3xl font-bold leading-tight tracking-[-0.015em] px-4 pb-6 pt-5 text-center">
+      <div className="py-8 xs:py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
+        <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-[-0.015em] px-2 xs:px-4 sm:px-6 pb-4 xs:pb-6 sm:pb-8 pt-2 xs:pt-4 sm:pt-5 text-center">
           Featured Projects
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-3 xs:gap-4 sm:gap-5 md:gap-6 lg:gap-8 p-2 xs:p-3 sm:p-4 md:p-6">
           {[
             {
               alt: 'Abstract colorful gradient with sharp lines',
@@ -309,9 +322,9 @@ const Home = () => {
             </div>
           ))}
         </div>
-        <div className="text-center pt-8">
+        <div className="text-center pt-4 xs:pt-6 sm:pt-8 md:pt-10">
           <Link to="/portfolio">
-            <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity mx-auto">
+            <button className="flex min-w-[120px] xs:min-w-[140px] sm:min-w-[160px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 xs:h-11 sm:h-12 md:h-14 px-4 xs:px-5 sm:px-6 md:px-8 bg-primary text-white text-sm xs:text-base sm:text-lg font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity mx-auto">
               <span className="truncate">View All Projects</span>
             </button>
           </Link>
@@ -319,8 +332,8 @@ const Home = () => {
       </div>
 
       {/* Stats Section */}
-      <div ref={statsRef} className="py-12 md:py-20 bg-gray-100/50 dark:bg-white/5 rounded-xl mx-4 my-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 px-4">
+      <div ref={statsRef} className="py-8 xs:py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-gray-100/50 dark:bg-white/5 rounded-xl mx-2 xs:mx-3 sm:mx-4 md:mx-6 lg:mx-8 my-4 xs:my-6 sm:my-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 xs:gap-6 sm:gap-8 md:gap-10 lg:gap-12 px-2 xs:px-3 sm:px-4 md:px-6">
           {[
             { number: 200, suffix: '+', label: 'Projects Delivered' },
             { number: 150, suffix: '+', label: 'Happy Clients' },
@@ -328,10 +341,10 @@ const Home = () => {
             { number: 10, suffix: '+', label: 'Years Experience' },
           ].map((stat, index) => (
             <div key={index} className="text-center">
-              <h3 className="text-3xl md:text-4xl font-bold text-primary mb-2">
+              <h3 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-1 xs:mb-2">
                 <AnimatedCounter target={stat.number} suffix={stat.suffix} duration={2000} shouldAnimate={shouldAnimateStats} />
               </h3>
-              <p className="text-sm md:text-base text-gray-600 dark:text-gray-400">{stat.label}</p>
+              <p className="text-xs xs:text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 px-1">{stat.label}</p>
             </div>
           ))}
         </div>

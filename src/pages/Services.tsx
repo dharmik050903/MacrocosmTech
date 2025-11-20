@@ -186,44 +186,44 @@ const Services = () => {
       </div>
 
       {/* Services Section */}
-      <div className="py-12 md:py-20">
-        <div className="text-center mb-12 px-4">
-          <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-4">
+      <div className="py-8 xs:py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
+        <div className="text-center mb-8 xs:mb-10 sm:mb-12 md:mb-16 px-2 xs:px-4 sm:px-6">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-[-0.015em] mb-2 xs:mb-3 sm:mb-4">
             Our Services
           </h2>
-          <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto px-2">
             Comprehensive solutions tailored to your business needs
           </p>
         </div>
 
         {/* Tabs */}
-        <div className="px-4 mb-8">
-          <div className="flex border-b border-slate-200 dark:border-[#3b4354] gap-8 max-w-2xl mx-auto justify-center">
+        <div className="px-2 xs:px-4 sm:px-6 mb-6 xs:mb-8">
+          <div className="flex border-b border-slate-200 dark:border-[#3b4354] gap-4 xs:gap-6 sm:gap-8 max-w-2xl mx-auto justify-center overflow-x-auto">
             <button
               onClick={() => setActiveTab('platform')}
-              className={`flex items-center justify-center border-b-[3px] pb-4 pt-2 px-6 transition-all ${
+              className={`flex items-center justify-center border-b-[3px] pb-3 xs:pb-4 pt-2 px-4 xs:px-6 transition-all flex-shrink-0 ${
                 activeTab === 'platform'
                   ? 'border-b-primary text-primary'
                   : 'border-b-transparent text-slate-500 dark:text-[#9ca6ba] hover:text-primary dark:hover:text-white'
               }`}
             >
-              <p className="text-sm font-bold leading-normal tracking-[0.015em] whitespace-nowrap">By Platform</p>
+              <p className="text-xs xs:text-sm sm:text-base font-bold leading-normal tracking-[0.015em] whitespace-nowrap">By Platform</p>
             </button>
             <button
               onClick={() => setActiveTab('technology')}
-              className={`flex items-center justify-center border-b-[3px] pb-4 pt-2 px-6 transition-all ${
+              className={`flex items-center justify-center border-b-[3px] pb-3 xs:pb-4 pt-2 px-4 xs:px-6 transition-all flex-shrink-0 ${
                 activeTab === 'technology'
                   ? 'border-b-primary text-primary'
                   : 'border-b-transparent text-slate-500 dark:text-[#9ca6ba] hover:text-primary dark:hover:text-white'
               }`}
             >
-              <p className="text-sm font-bold leading-normal tracking-[0.015em] whitespace-nowrap">By Technology</p>
+              <p className="text-xs xs:text-sm sm:text-base font-bold leading-normal tracking-[0.015em] whitespace-nowrap">By Technology</p>
             </button>
           </div>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-4 xs:gap-5 sm:gap-6 md:gap-8 lg:gap-10 px-2 xs:px-3 sm:px-4 md:px-6">
           {(activeTab === 'platform' ? servicesByPlatform : servicesByTechnology).map((service, index) => (
             <div
               key={index}

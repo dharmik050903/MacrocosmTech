@@ -56,35 +56,157 @@ body {
   }
 }
 
-/* Ticker animation */
+/* Ticker animation - Smooth transitions */
 @keyframes ticker-animation {
-  0% { transform: translateY(0); }
-  20% { transform: translateY(0); }
-  25% { transform: translateY(-2rem); }
-  45% { transform: translateY(-2rem); }
-  50% { transform: translateY(-4rem); }
-  70% { transform: translateY(-4rem); }
-  75% { transform: translateY(-6rem); }
-  95% { transform: translateY(-6rem); }
-  100% { transform: translateY(-8rem); }
+  0% { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+  18% { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+  20% { 
+    transform: translateY(-1.75rem);
+    opacity: 0.3;
+  }
+  22% { 
+    transform: translateY(-1.75rem);
+    opacity: 1;
+  }
+  38% { 
+    transform: translateY(-1.75rem);
+    opacity: 1;
+  }
+  40% { 
+    transform: translateY(-3.5rem);
+    opacity: 0.3;
+  }
+  42% { 
+    transform: translateY(-3.5rem);
+    opacity: 1;
+  }
+  58% { 
+    transform: translateY(-3.5rem);
+    opacity: 1;
+  }
+  60% { 
+    transform: translateY(-5.25rem);
+    opacity: 0.3;
+  }
+  62% { 
+    transform: translateY(-5.25rem);
+    opacity: 1;
+  }
+  78% { 
+    transform: translateY(-5.25rem);
+    opacity: 1;
+  }
+  80% { 
+    transform: translateY(-7rem);
+    opacity: 0.3;
+  }
+  82% { 
+    transform: translateY(-7rem);
+    opacity: 1;
+  }
+  98% { 
+    transform: translateY(-7rem);
+    opacity: 1;
+  }
+  100% { 
+    transform: translateY(-8.75rem);
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: 375px) {
+  @keyframes ticker-animation {
+    0% { transform: translateY(0); opacity: 1; }
+    18% { transform: translateY(0); opacity: 1; }
+    20% { transform: translateY(-2rem); opacity: 0.3; }
+    22% { transform: translateY(-2rem); opacity: 1; }
+    38% { transform: translateY(-2rem); opacity: 1; }
+    40% { transform: translateY(-4rem); opacity: 0.3; }
+    42% { transform: translateY(-4rem); opacity: 1; }
+    58% { transform: translateY(-4rem); opacity: 1; }
+    60% { transform: translateY(-6rem); opacity: 0.3; }
+    62% { transform: translateY(-6rem); opacity: 1; }
+    78% { transform: translateY(-6rem); opacity: 1; }
+    80% { transform: translateY(-8rem); opacity: 0.3; }
+    82% { transform: translateY(-8rem); opacity: 1; }
+    98% { transform: translateY(-8rem); opacity: 1; }
+    100% { transform: translateY(-10rem); opacity: 0.3; }
+  }
+}
+
+@media (min-width: 640px) {
+  @keyframes ticker-animation {
+    0% { transform: translateY(0); opacity: 1; }
+    18% { transform: translateY(0); opacity: 1; }
+    20% { transform: translateY(-2.25rem); opacity: 0.3; }
+    22% { transform: translateY(-2.25rem); opacity: 1; }
+    38% { transform: translateY(-2.25rem); opacity: 1; }
+    40% { transform: translateY(-4.5rem); opacity: 0.3; }
+    42% { transform: translateY(-4.5rem); opacity: 1; }
+    58% { transform: translateY(-4.5rem); opacity: 1; }
+    60% { transform: translateY(-6.75rem); opacity: 0.3; }
+    62% { transform: translateY(-6.75rem); opacity: 1; }
+    78% { transform: translateY(-6.75rem); opacity: 1; }
+    80% { transform: translateY(-9rem); opacity: 0.3; }
+    82% { transform: translateY(-9rem); opacity: 1; }
+    98% { transform: translateY(-9rem); opacity: 1; }
+    100% { transform: translateY(-11.25rem); opacity: 0.3; }
+  }
 }
 
 @media (min-width: 768px) {
   @keyframes ticker-animation {
-    0% { transform: translateY(0); }
-    20% { transform: translateY(0); }
-    25% { transform: translateY(-2.5rem); }
-    45% { transform: translateY(-2.5rem); }
-    50% { transform: translateY(-5rem); }
-    70% { transform: translateY(-5rem); }
-    75% { transform: translateY(-7.5rem); }
-    95% { transform: translateY(-7.5rem); }
-    100% { transform: translateY(-10rem); }
+    0% { transform: translateY(0); opacity: 1; }
+    18% { transform: translateY(0); opacity: 1; }
+    20% { transform: translateY(-2.5rem); opacity: 0.3; }
+    22% { transform: translateY(-2.5rem); opacity: 1; }
+    38% { transform: translateY(-2.5rem); opacity: 1; }
+    40% { transform: translateY(-5rem); opacity: 0.3; }
+    42% { transform: translateY(-5rem); opacity: 1; }
+    58% { transform: translateY(-5rem); opacity: 1; }
+    60% { transform: translateY(-7.5rem); opacity: 0.3; }
+    62% { transform: translateY(-7.5rem); opacity: 1; }
+    78% { transform: translateY(-7.5rem); opacity: 1; }
+    80% { transform: translateY(-10rem); opacity: 0.3; }
+    82% { transform: translateY(-10rem); opacity: 1; }
+    98% { transform: translateY(-10rem); opacity: 1; }
+    100% { transform: translateY(-12.5rem); opacity: 0.3; }
+  }
+}
+
+@media (min-width: 1024px) {
+  @keyframes ticker-animation {
+    0% { transform: translateY(0); opacity: 1; }
+    18% { transform: translateY(0); opacity: 1; }
+    20% { transform: translateY(-3rem); opacity: 0.3; }
+    22% { transform: translateY(-3rem); opacity: 1; }
+    38% { transform: translateY(-3rem); opacity: 1; }
+    40% { transform: translateY(-6rem); opacity: 0.3; }
+    42% { transform: translateY(-6rem); opacity: 1; }
+    58% { transform: translateY(-6rem); opacity: 1; }
+    60% { transform: translateY(-9rem); opacity: 0.3; }
+    62% { transform: translateY(-9rem); opacity: 1; }
+    78% { transform: translateY(-9rem); opacity: 1; }
+    80% { transform: translateY(-12rem); opacity: 0.3; }
+    82% { transform: translateY(-12rem); opacity: 1; }
+    98% { transform: translateY(-12rem); opacity: 1; }
+    100% { transform: translateY(-15rem); opacity: 0.3; }
   }
 }
 
 .animate-ticker {
-  animation: ticker-animation 10s infinite ease-in-out;
+  animation: ticker-animation 20s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 /* Marquee animation */
@@ -141,6 +263,15 @@ body {
 
 .video-zoom-in {
   animation: videoZoomIn 15s ease-out forwards;
+  will-change: transform;
+}
+
+/* Prevent layout shifts during scroll */
+.hero-section {
+  contain: layout style paint;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 /* Content fade-in animation */

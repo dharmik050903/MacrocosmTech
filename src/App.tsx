@@ -23,8 +23,8 @@ function App() {
       <div className="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
         <Header />
         <div className="layout-container flex h-full grow flex-col">
-          <div className="px-0 sm:px-0 md:px-0 lg:px-0 flex flex-1 justify-center pt-16 sm:pt-20 md:pt-24 lg:pt-28 pb-5">
-            <div className="layout-content-container flex flex-col w-full max-w-[1400px] flex-1 px-4 sm:px-10 md:px-20 lg:px-40">
+          <div className="px-0 flex flex-1 justify-center pt-14 xs:pt-16 sm:pt-18 md:pt-20 lg:pt-24 xl:pt-28 2xl:pt-32 pb-4 xs:pb-5 sm:pb-6">
+            <div className="layout-content-container flex flex-col w-full max-w-[1400px] flex-1 px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24">
               <main className="flex flex-col flex-1 page-transition">
                 <Routes>
                   <Route path="/" element={<Home />} />

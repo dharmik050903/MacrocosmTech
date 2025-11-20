@@ -219,13 +219,13 @@ const About = () => {
           </div>
         </section>
 
-        {/* Mission & Values Section */}
-        <section className="px-4 sm:px-6 md:px-8 lg:px-10">
-          <div className="max-w-[1400px] mx-auto">
-            <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-12">
-              Our Mission & Values
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* Mission & Values Section */}
+                <section className="px-2 xs:px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+                  <div className="max-w-[1400px] mx-auto">
+                    <h2 className="text-center text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-[-0.015em] mb-6 xs:mb-8 sm:mb-10 md:mb-12">
+                      Our Mission & Values
+                    </h2>
+                    <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-4 xs:gap-5 sm:gap-6 md:gap-8 lg:gap-10">
               {[
                 { icon: 'groups', title: 'Client-Centric', desc: 'Your success is our success. We build lasting partnerships by putting your needs at the heart of everything we do.' },
                 { icon: 'visibility', title: 'Radical Transparency', desc: 'We believe in open, honest communication. You\'ll always be in the loop with clear insights and regular updates.' },
@@ -246,12 +246,12 @@ const About = () => {
           </div>
         </section>
 
-        {/* Journey Timeline Section */}
-        <section ref={timelineRef} className="px-4 sm:px-6 md:px-8 lg:px-10">
-          <div className="max-w-[1400px] mx-auto">
-            <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-12">
-              The Zeeniith Journey
-            </h2>
+                {/* Journey Timeline Section */}
+                <section ref={timelineRef} className="px-2 xs:px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+                  <div className="max-w-[1400px] mx-auto">
+                    <h2 className="text-center text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-[-0.015em] mb-6 xs:mb-8 sm:mb-10 md:mb-12">
+                      The Zeeniith Journey
+                    </h2>
             <div className="relative flex flex-col items-center w-full">
               {/* Animated connecting line - Desktop */}
               <div className="absolute left-1/2 top-0 w-0.5 -translate-x-1/2 hidden md:block" style={{ height: '100%' }}>

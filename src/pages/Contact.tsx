@@ -143,9 +143,9 @@ const Contact = () => {
                       </p>
                       <a
                         className="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary"
-                        href="mailto:hello@macrocosmtech.com"
+                        href="mailto:hello@zeeniith.com"
                       >
-                        hello@macrocosmtech.com
+                        hello@zeeniith.com
                       </a>
                     </div>
                   </div>
@@ -243,11 +243,11 @@ const Contact = () => {
         </div>
 
         {/* Why Contact Us Section */}
-        <div className="px-4 py-12 md:py-20">
-          <h2 className="text-center text-3xl font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-white mb-12">
+        <div className="px-2 xs:px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 py-8 xs:py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
+          <h2 className="text-center text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-white mb-6 xs:mb-8 sm:mb-10 md:mb-12">
             Why Contact Us?
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-4 xs:gap-5 sm:gap-6 md:gap-8 lg:gap-10 max-w-5xl mx-auto">
             {[
               {
                 icon: 'lightbulb',
@@ -280,12 +280,12 @@ const Contact = () => {
         </div>
 
         {/* Office Hours */}
-        <div className="px-4 py-12 md:py-20 bg-gray-100/50 dark:bg-white/5 rounded-xl mx-4">
-          <h2 className="text-center text-2xl font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-white mb-8">
+        <div className="px-2 xs:px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 py-8 xs:py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-gray-100/50 dark:bg-white/5 rounded-xl mx-2 xs:mx-3 sm:mx-4 md:mx-6 lg:mx-8">
+          <h2 className="text-center text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-white mb-4 xs:mb-6 sm:mb-8 md:mb-10">
             Office Hours
           </h2>
           <div className="max-w-2xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 xs:gap-5 sm:gap-6">
               {[
                 { day: 'Monday - Friday', time: '9:00 AM - 6:00 PM' },
                 { day: 'Saturday', time: '10:00 AM - 4:00 PM' },
