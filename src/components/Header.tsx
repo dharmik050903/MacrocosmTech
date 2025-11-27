@@ -68,11 +68,15 @@ const Header = () => {
         <div className="w-full px-3 xs:px-4 sm:px-5 md:px-6 lg:px-7 xl:px-9 flex items-center justify-between gap-2 xs:gap-2.5 sm:gap-3 md:gap-4 lg:gap-6">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-1.5 xs:gap-2 sm:gap-2.5 md:gap-2.5 lg:gap-3 group flex-shrink-0 min-w-0">
-            <img 
-              src="/Header_logo_v1.png" 
-              alt="Zeeniith Logo" 
-              className="h-8 xs:h-9 sm:h-10 md:h-10 lg:h-11 xl:h-12 w-auto object-contain flex-shrink-0 group-hover:opacity-90 transition-opacity"
-            />
+            <div className="h-8 xs:h-9 sm:h-10 md:h-10 lg:h-11 xl:h-12 w-auto flex items-center justify-center flex-shrink-0">
+              <img 
+                src={theme === 'dark' ? "/white-01.svg" : "/black-01.-01.svg"} 
+                alt="Zeeniith Logo" 
+                className={`h-full w-auto max-w-full object-contain transition-opacity ${
+                  theme === 'dark' ? 'dark-logo group-hover:opacity-90' : 'group-hover:opacity-90'
+                }`}
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -143,13 +147,14 @@ const Header = () => {
         <div className="flex flex-col h-full p-4 sm:p-6 overflow-y-auto">
           <div className="flex items-center justify-between mb-6 sm:mb-8 pb-4 sm:pb-6 border-b border-gray-700/50">
             <Link to="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2.5 sm:gap-3 min-w-0">
-              <img 
-                src="/Header_logo_v1.png" 
-                alt="Zeeniith Logo" 
-                className="h-8 sm:h-9 w-auto object-contain flex-shrink-0"
-              />
-              <div className="flex flex-col min-w-0">
-                <h2 className="text-base sm:text-lg font-bold text-white truncate">Zeeniith</h2>
+              <div className="h-8 sm:h-9 w-auto flex items-center justify-center flex-shrink-0">
+                <img 
+                  src={theme === 'dark' ? "/white-01.svg" : "/black-01.-01.svg"} 
+                  alt="Zeeniith Logo" 
+                  className={`h-full w-auto max-w-full object-contain ${
+                    theme === 'dark' ? 'dark-logo' : ''
+                  }`}
+                />
               </div>
             </Link>
             <button

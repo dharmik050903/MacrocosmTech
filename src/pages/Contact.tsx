@@ -36,16 +36,16 @@ const Contact = () => {
       />
       <main className="flex-grow">
         <div className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
-            <div className="flex flex-col space-y-8">
-              <div className="flex flex-col gap-3">
-                <h1 className="text-4xl font-black leading-tight tracking-[-0.033em] text-gray-900 dark:text-white md:text-5xl">
-                  Let's build something amazing together.
-                </h1>
-                <p className="text-base font-normal leading-normal text-gray-500 dark:text-gray-400">
-                  We'd love to hear about your project.
-                </p>
-              </div>
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="flex flex-col space-y-8">
+            <div className="flex flex-col gap-3">
+              <h1 className="text-4xl font-black leading-tight tracking-[-0.033em] text-gray-900 dark:text-white md:text-5xl">
+                Get in Touch with ZEENIITH
+              </h1>
+              <p className="text-base font-normal leading-normal text-gray-500 dark:text-gray-400">
+                We're here to answer your questions and discuss how we can help your business grow.
+              </p>
+            </div>
               <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                   <label className="flex flex-col">
@@ -54,7 +54,7 @@ const Contact = () => {
                     </p>
                     <input
                       className="form-input flex w-full flex-1 resize-none overflow-hidden rounded-lg border border-gray-300 bg-white p-4 text-base font-normal leading-normal text-gray-900 placeholder:text-gray-400 focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-white/20 dark:bg-white/5 dark:text-white dark:placeholder:text-gray-500 dark:focus:border-primary"
-                      placeholder="Enter your full name"
+                      placeholder="Your full name"
                       type="text"
                       name="name"
                       value={formData.name}
@@ -68,7 +68,7 @@ const Contact = () => {
                     </p>
                     <input
                       className="form-input flex w-full flex-1 resize-none overflow-hidden rounded-lg border border-gray-300 bg-white p-4 text-base font-normal leading-normal text-gray-900 placeholder:text-gray-400 focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-white/20 dark:bg-white/5 dark:text-white dark:placeholder:text-gray-500 dark:focus:border-primary"
-                      placeholder="What's your company name?"
+                      placeholder="Your company"
                       type="text"
                       name="company"
                       value={formData.company}
@@ -82,7 +82,7 @@ const Contact = () => {
                   </p>
                   <input
                     className="form-input flex w-full flex-1 resize-none overflow-hidden rounded-lg border border-gray-300 bg-white p-4 text-base font-normal leading-normal text-gray-900 placeholder:text-gray-400 focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-white/20 dark:bg-white/5 dark:text-white dark:placeholder:text-gray-500 dark:focus:border-primary"
-                    placeholder="Enter your email address"
+                    placeholder="your@email.com"
                     type="email"
                     name="email"
                     value={formData.email}
@@ -129,7 +129,7 @@ const Contact = () => {
                         Our Office
                       </p>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
-                        123 Innovation Drive, Tech City, 98765
+                        121 Narayan Empire, A.V. Road, Anand, Gujarat 388120, India
                       </p>
                     </div>
                   </div>
@@ -143,9 +143,9 @@ const Contact = () => {
                       </p>
                       <a
                         className="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary"
-                        href="mailto:hello@zeeniith.com"
+                        href="mailto:[ADD YOUR EMAIL]"
                       >
-                        hello@zeeniith.com
+                        [ADD YOUR EMAIL]
                       </a>
                     </div>
                   </div>
@@ -159,9 +159,9 @@ const Contact = () => {
                       </p>
                       <a
                         className="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary"
-                        href="tel:+1234567890"
+                        href="tel:[ADD YOUR PHONE NUMBER]"
                       >
-                        (123) 456-7890
+                        [ADD YOUR PHONE NUMBER]
                       </a>
                     </div>
                   </div>
@@ -186,7 +186,7 @@ const Contact = () => {
                 <div className="mt-4 flex items-center space-x-4">
                   <a
                     className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-200 text-gray-600 transition-colors hover:bg-primary hover:text-white dark:bg-white/10 dark:text-gray-300 dark:hover:bg-primary"
-                    href="https://linkedin.com"
+                    href="https://linkedin.com/company/[YOUR_HANDLE]"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
@@ -202,7 +202,7 @@ const Contact = () => {
                   </a>
                   <a
                     className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-200 text-gray-600 transition-colors hover:bg-primary hover:text-white dark:bg-white/10 dark:text-gray-300 dark:hover:bg-primary"
-                    href="https://twitter.com"
+                    href="https://twitter.com/[YOUR_HANDLE]"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Twitter"
@@ -247,7 +247,7 @@ const Contact = () => {
           <h2 className="text-center text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-white mb-6 xs:mb-8 sm:mb-10 md:mb-12">
             Why Contact Us?
           </h2>
-          <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-4 xs:gap-5 sm:gap-6 md:gap-8 lg:gap-10 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-4 xs:gap-5 sm:gap-6 md:gap-8 lg:gap-10 max-w-7xl mx-auto">
             {[
               {
                 icon: 'lightbulb',
@@ -267,13 +267,13 @@ const Contact = () => {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39]"
+                className="flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] h-full"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/20 text-primary">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/20 text-primary flex-shrink-0">
                   <span className="material-symbols-outlined text-3xl">{feature.icon}</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">{feature.title}</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{feature.description}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 flex-grow text-justify">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -284,13 +284,12 @@ const Contact = () => {
           <h2 className="text-center text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-white mb-4 xs:mb-6 sm:mb-8 md:mb-10">
             Office Hours
           </h2>
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 xs:gap-5 sm:gap-6">
               {[
-                { day: 'Monday - Friday', time: '9:00 AM - 6:00 PM' },
-                { day: 'Saturday', time: '10:00 AM - 4:00 PM' },
+                { day: 'Monday - Friday', time: '9:00 AM - 6:00 PM IST' },
+                { day: 'Saturday', time: '10:00 AM - 4:00 PM IST' },
                 { day: 'Sunday', time: 'Closed' },
-                { day: 'Emergency Support', time: '24/7 Available' },
               ].map((schedule, index) => (
                 <div
                   key={index}
@@ -307,25 +306,41 @@ const Contact = () => {
         {/* FAQ Section */}
         <div className="px-4 py-12 md:py-20">
           <h2 className="text-center text-2xl font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-white mb-8">
-            Common Questions
+            Frequently Asked Questions
           </h2>
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="max-w-5xl mx-auto space-y-4">
             {[
               {
-                question: 'How quickly will you respond to my inquiry?',
-                answer: 'We aim to respond to all inquiries within 24 hours during business days. For urgent matters, please call us directly.',
+                question: 'Where is ZEENIITH located?',
+                answer: 'We\'re based in Anand, Gujarat, India. Our address: 121 Narayan Empire, A.V. Road, Anand, Gujarat 388120.',
               },
               {
-                question: 'Do you offer free consultations?',
-                answer: 'Yes! We offer free initial consultations to discuss your project, understand your needs, and provide recommendations.',
+                question: 'What industries have you worked with?',
+                answer: 'We\'ve worked across 50+ industries including startups, healthcare, finance, e-commerce, SaaS, education, real estate, and manufacturing.',
               },
               {
-                question: 'What information should I include in my message?',
-                answer: 'Please include details about your project goals, timeline, budget range, and any specific requirements or questions you have.',
+                question: 'How many projects have you completed?',
+                answer: 'We\'ve successfully delivered 100+ projects with 98% client satisfaction rate.',
               },
               {
-                question: 'Can I schedule a meeting instead of filling out the form?',
-                answer: 'Absolutely! You can call us directly or email us to schedule a meeting at your convenience.',
+                question: 'Do you sign NDAs?',
+                answer: 'Yes, we sign non-disclosure agreements to protect your confidential information.',
+              },
+              {
+                question: 'What\'s your communication process?',
+                answer: 'We maintain regular communication through weekly updates, sprint reviews, and dedicated project managers.',
+              },
+              {
+                question: 'Can you work with our timezone?',
+                answer: 'Yes, we have team members across multiple timezones and can schedule calls accordingly.',
+              },
+              {
+                question: 'How do I get a proposal?',
+                answer: 'Schedule a free consultation with our team. We\'ll discuss your needs and provide a detailed proposal.',
+              },
+              {
+                question: 'Still have questions?',
+                answer: 'Contact us directly! We\'re happy to help.',
               },
             ].map((faq, index) => (
               <div
@@ -333,7 +348,7 @@ const Contact = () => {
                 className="flex flex-col gap-3 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39]"
               >
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white">{faq.question}</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{faq.answer}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>
@@ -344,7 +359,7 @@ const Contact = () => {
           <h2 className="text-center text-2xl font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-white mb-8">
             Other Ways to Reach Us
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {[
               {
                 icon: 'chat',
@@ -370,14 +385,14 @@ const Contact = () => {
             ].map((method, index) => (
               <div
                 key={index}
-                className="flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] text-center"
+                className="flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] text-center h-full"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/20 text-primary mx-auto">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/20 text-primary mx-auto flex-shrink-0">
                   <span className="material-symbols-outlined text-3xl">{method.icon}</span>
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white">{method.title}</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{method.description}</p>
-                <button className="mt-2 px-4 py-2 bg-primary text-white rounded-lg text-sm font-bold hover:opacity-90 transition-opacity">
+                <p className="text-sm text-gray-600 dark:text-gray-400 flex-grow">{method.description}</p>
+                <button className="mt-2 px-4 py-2 bg-primary text-white rounded-lg text-sm font-bold hover:opacity-90 transition-opacity flex-shrink-0">
                   {method.action}
                 </button>
               </div>

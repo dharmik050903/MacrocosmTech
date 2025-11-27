@@ -33,7 +33,7 @@ const Portfolio = () => {
     }
   }, [])
 
-  const filters = ['All', 'Web App', 'Mobile', 'Branding', 'UI/UX']
+  const filters = ['All Projects', 'Website Development', 'Mobile App Development', 'Custom Software Development', 'SEO & Digital Marketing', 'AI & Automation Solutions']
 
   const projects = [
     {
@@ -75,7 +75,7 @@ const Portfolio = () => {
   ]
 
   const filteredProjects =
-    activeFilter === 'All'
+    activeFilter === 'All Projects'
       ? projects
       : projects.filter((project) => project.category === activeFilter)
 
@@ -114,10 +114,10 @@ const Portfolio = () => {
             }`}>
               <div className="flex flex-col gap-3 sm:gap-4">
                 <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.033em] drop-shadow-lg px-2">
-                  Crafting Digital Universes
+                  Our Projects - Explore the Impact We've Created
                 </h1>
                 <h2 className="text-white/90 dark:text-white/80 text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl mx-auto drop-shadow-md px-2">
-                  We build stunning, high-performance web and mobile applications that captivate users and drive results. Explore our portfolio of work.
+                  Take a look at how our custom software and digital marketing solutions have helped businesses achieve remarkable results.
                 </h2>
               </div>
               <button className="flex min-w-[100px] sm:min-w-[120px] w-fit max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 sm:h-12 px-4 sm:px-6 bg-primary text-white text-sm sm:text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95">
@@ -178,11 +178,11 @@ const Portfolio = () => {
                 Client Testimonial
               </p>
               <p className="text-slate-800 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] @[480px]:text-2xl">
-                Zeeniith didn't just build a product; they crafted an experience. Their attention to detail is exceptional.
+                "ZEENIITH didn't just build a product; they crafted an experience. Their attention to detail is exceptional and the results speak for themselves."
               </p>
               <div className="flex items-end gap-3 justify-between pt-2">
                 <p className="text-slate-600 dark:text-slate-400 text-base font-normal leading-normal">
-                  Jane Doe, CEO at Starlight Inc.
+                  Vikram Singh, CEO at Starlight Inc.
                 </p>
               </div>
             </div>
@@ -220,33 +220,33 @@ const Portfolio = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
             {[
               {
-                title: 'Project Nova - Enterprise Dashboard',
-                category: 'Web App',
-                challenge: 'Build a comprehensive analytics dashboard for enterprise clients',
-                solution: 'Developed a scalable React-based platform with real-time data visualization',
-                results: ['50% faster data processing', '99.9% uptime', '10K+ daily active users'],
+                title: 'E-Commerce Platform Redesign',
+                category: 'Website Development',
+                challenge: 'Build a comprehensive e-commerce platform to handle increased traffic and improve user experience for a fashion retail company.',
+                solution: 'Developed a scalable React-based platform with real-time inventory management, optimized checkout process, and mobile-first responsive design.',
+                results: ['250% increase in conversions', '40% reduction in cart abandonment', '3x transaction capacity'],
                 image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC9IfUe8kIKhQGvfjaXXc2o3ET39FoHcpI5tq_aQg8UKTpy3AzUI9YAe1jWoXK3r17xt1QnTNyzwSPmbcCmOuz4dTqyoLNQ8eO921bbSBpRgZ5N2b3B5a19ZlXOI1wqrbSo4cV__Bg0oRt4TNUOuYt_8eyV0CW4UEuNulRsWDWanWaUNFUQ3e8igh9o1pmO_kFj7n-XpV-UjJ7q4jkuL0e0VAOjXQx1mEhzRqx58JqL4m-0W3qTLLxcxCRXfJubhIFTxQHXifonJtrA',
               },
               {
-                title: 'Project Helios - Music Streaming App',
-                category: 'Mobile',
-                challenge: 'Create an intuitive mobile music streaming experience',
-                solution: 'Built a native iOS and Android app with offline playback and social features',
-                results: ['1M+ downloads', '4.8 star rating', '500K+ monthly users'],
+                title: 'FinTech Mobile Banking App',
+                category: 'Mobile App Development',
+                challenge: 'Create a secure mobile banking application with biometric authentication and real-time transaction capabilities.',
+                solution: 'Built a native iOS and Android app with React Native, implementing secure authentication, real-time transaction processing, and investment tracking features.',
+                results: ['500K+ downloads', '4.8 star rating', '150% increase in user engagement'],
                 image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDSzptqPerihEzmaFGncnl9eN1k0u0kFnkVCitHQZ2K55tPDcRoBvwqCeAYTbFreBg7CgEE9yG6k2rpn1LueJ6o8Fmtp9UD58IUOtag_rWfnWQCciUTP4D_MqkLuYh1-xpfgOU5p1AUDxwuEyJqHnIZp0WkJuGJRU-AiTtSDejRypHEYj-kGIJklvzjfVceVioXTWcoRouqic9nWe6yHcxtZMqPXHHP2EnLXGtrxk672b7qLG1V0ac7HMYYQm8DUrN5mUoKYOmWrPrE',
               },
             ].map((caseStudy, index) => (
               <div
                 key={index}
-                className="flex flex-col gap-4 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] overflow-hidden"
+                className="flex flex-col gap-4 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] overflow-hidden h-full"
               >
                 <div
-                  className="w-full h-48 bg-cover bg-center"
+                  className="w-full h-48 bg-cover bg-center flex-shrink-0"
                   style={{ backgroundImage: `url("${caseStudy.image}")` }}
                   role="img"
                   aria-label={caseStudy.title}
                 />
-                <div className="p-6 flex flex-col gap-4">
+                <div className="p-6 flex flex-col gap-4 flex-grow min-h-0">
                   <div className="flex items-center justify-between">
                     <h3 className="text-xl font-bold text-slate-900 dark:text-white">{caseStudy.title}</h3>
                     <span className="text-primary text-sm font-bold px-3 py-1 bg-primary/10 rounded-full">
@@ -255,11 +255,11 @@ const Portfolio = () => {
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Challenge:</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">{caseStudy.challenge}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 text-justify">{caseStudy.challenge}</p>
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Solution:</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">{caseStudy.solution}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 text-justify">{caseStudy.solution}</p>
                   </div>
                   <div className="pt-2 border-t border-gray-200 dark:border-[#282e39]">
                     <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Results:</p>
@@ -306,17 +306,17 @@ const Portfolio = () => {
             ].map((testimonial, index) => (
               <div
                 key={index}
-                className="flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39]"
+                className="flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] h-full"
               >
-                <div className="flex items-center gap-1 text-primary">
+                <div className="flex items-center gap-1 text-primary flex-shrink-0">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <span key={star} className="material-symbols-outlined text-xl">star</span>
                   ))}
                 </div>
-                <p className="text-sm text-gray-700 dark:text-gray-300 italic">"{testimonial.quote}"</p>
-                <div className="pt-2 border-t border-gray-200 dark:border-[#282e39]">
-                  <p className="font-bold text-gray-900 dark:text-white">{testimonial.author}</p>
-                  <p className="text-xs text-gray-600 dark:text-gray-400">
+                <p className="text-sm text-gray-700 dark:text-gray-300 italic flex-grow">"{testimonial.quote}"</p>
+                <div className="pt-2 border-t border-gray-200 dark:border-[#282e39] flex-shrink-0">
+                  <p className="font-bold text-gray-900 dark:text-white truncate">{testimonial.author}</p>
+                  <p className="text-xs text-gray-600 dark:text-gray-400 truncate">
                     {testimonial.role} at {testimonial.company}
                   </p>
                 </div>

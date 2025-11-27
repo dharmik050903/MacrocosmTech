@@ -182,10 +182,10 @@ const About = () => {
                   <span className="text-primary text-sm font-bold">About Us</span>
                 </div>
                 <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.033em] drop-shadow-lg px-2">
-                  Where Collaboration Meets Innovation
+                  About ZEENIITH - Your Trusted Digital Partner
                 </h1>
                 <h2 className="text-white/90 dark:text-white/80 text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl mx-auto drop-shadow-md px-2">
-                  We're a diverse team of passionate professionals working together to transform ideas into powerful digital solutions. Every project is a partnership, every challenge an opportunity to excel.
+                  We're here to answer your questions and discuss how we can help your business grow.
                 </h2>
               </div>
               <Link to="/contact">
@@ -199,17 +199,17 @@ const About = () => {
 
         {/* Our Story Section */}
         <section className="px-4 sm:px-6 md:px-8 lg:px-10">
-          <div className="max-w-[1400px] mx-auto">
+          <div className="max-w-7xl mx-auto">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-6">
               Our Story
             </h2>
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="flex-1">
-                <p className="text-base md:text-lg font-normal leading-relaxed text-gray-800 dark:text-gray-300 mb-4">
-                  Zeeniith was founded with a singular purpose: to bridge the gap between brilliant ideas and powerful execution. Our journey began with a small team of passionate developers and designers who believed in the transformative power of code and creativity.
+                <p className="text-base md:text-lg font-normal leading-relaxed text-gray-800 dark:text-gray-300 mb-4 text-justify">
+                  Founded with a vision to transform businesses through innovative technology, ZEENIITH has emerged as a trusted partner for 100+ companies across India. Our journey began with a simple belief: high-quality software development and digital marketing should be accessible to businesses of all sizes.
                 </p>
-                <p className="text-base md:text-lg font-normal leading-relaxed text-gray-800 dark:text-gray-300">
-                  Today, we've grown into a dynamic agency that helps businesses navigate the digital frontier and achieve their most ambitious goals. We combine technical expertise with creative vision to deliver solutions that not only meet but exceed expectations.
+                <p className="text-base md:text-lg font-normal leading-relaxed text-gray-800 dark:text-gray-300 text-justify">
+                  Our team brings together expertise from Fortune 500 companies and successful startups, each member bringing unique perspectives that fuel our innovation and client success.
                 </p>
               </div>
               <div className="flex-1 w-full h-64 md:h-80 bg-gradient-to-br from-primary/20 to-primary/10 dark:from-primary/30 dark:to-primary/20 rounded-2xl flex items-center justify-center">
@@ -221,25 +221,38 @@ const About = () => {
 
                 {/* Mission & Values Section */}
                 <section className="px-2 xs:px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
-                  <div className="max-w-[1400px] mx-auto">
+                  <div className="max-w-7xl mx-auto">
                     <h2 className="text-center text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-[-0.015em] mb-6 xs:mb-8 sm:mb-10 md:mb-12">
                       Our Mission & Values
                     </h2>
-                    <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-4 xs:gap-5 sm:gap-6 md:gap-8 lg:gap-10">
+                    <div className="max-w-6xl mx-auto mb-8 text-center">
+                      <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4">Our Mission</h3>
+                      <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 mb-8 text-justify">
+                        To empower businesses through innovative technology solutions and data-driven digital marketing strategies that drive sustainable growth and competitive advantage.
+                      </p>
+                      <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4">Our Vision</h3>
+                      <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 text-justify">
+                        To be India's most trusted technology and marketing partner for businesses seeking digital transformation and exceptional growth.
+                      </p>
+                    </div>
+                    <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-4 xs:gap-5 sm:gap-6 md:gap-8 lg:gap-10">
               {[
-                { icon: 'groups', title: 'Client-Centric', desc: 'Your success is our success. We build lasting partnerships by putting your needs at the heart of everything we do.' },
-                { icon: 'visibility', title: 'Radical Transparency', desc: 'We believe in open, honest communication. You\'ll always be in the loop with clear insights and regular updates.' },
-                { icon: 'rocket_launch', title: 'Constant Innovation', desc: 'We thrive on pushing boundaries, exploring new technologies, and delivering solutions that are ahead of the curve.' },
+                { icon: 'groups', title: 'Client Success', desc: 'Your success is our success. We\'re deeply invested in delivering exceptional results and long-term value.' },
+                { icon: 'lightbulb', title: 'Innovation', desc: 'We stay at the forefront of technology and marketing trends to provide cutting-edge solutions.' },
+                { icon: 'visibility', title: 'Transparency', desc: 'We believe in open communication, honest feedback, and clear timelines.' },
+                { icon: 'verified', title: 'Quality', desc: 'We never compromise on quality. Every project receives our full attention and expertise.' },
+                { icon: 'handshake', title: 'Collaboration', desc: 'We work as an extension of your team, fostering strong partnerships based on mutual respect.' },
+                { icon: 'school', title: 'Continuous Learning', desc: 'We\'re committed to staying updated with the latest technologies and best practices.' },
               ].map((value, index) => (
                 <div
                   key={index}
-                  className="group flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-xl hover:-translate-y-1"
+                  className="group flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-xl hover:-translate-y-1 h-full"
                 >
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-colors">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-colors flex-shrink-0">
                     <span className="material-symbols-outlined text-primary text-3xl">{value.icon}</span>
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">{value.title}</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{value.desc}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed flex-grow text-justify">{value.desc}</p>
                 </div>
               ))}
             </div>
@@ -248,9 +261,9 @@ const About = () => {
 
                 {/* Journey Timeline Section */}
                 <section ref={timelineRef} className="px-2 xs:px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
-                  <div className="max-w-[1400px] mx-auto">
+                  <div className="max-w-7xl mx-auto">
                     <h2 className="text-center text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-[-0.015em] mb-6 xs:mb-8 sm:mb-10 md:mb-12">
-                      The Zeeniith Journey
+                      The ZEENIITH Journey
                     </h2>
             <div className="relative flex flex-col items-center w-full">
               {/* Animated connecting line - Desktop */}
@@ -273,7 +286,7 @@ const About = () => {
               </div>
               
               {[
-                { year: '2023', title: 'Founded', desc: 'Zeeniith is born from a shared passion for code and innovation.', align: 'left' },
+                { year: '2023', title: 'Founded', desc: 'ZEENIITH is born from a shared passion for code and innovation.', align: 'left' },
                 { year: '2024', title: 'First Major Client', desc: 'Partnered with a Fortune 500 company, marking our entry into enterprise solutions.', align: 'right' },
                 { year: '2025', title: 'Key Product Launch', desc: 'Launched our first proprietary SaaS platform, revolutionizing how businesses manage their digital presence.', align: 'left' },
               ].map((milestone, index) => (
@@ -334,9 +347,9 @@ const About = () => {
               ].map((member, index) => (
                 <div
                   key={index}
-                  className="group flex flex-col items-center text-center p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-xl hover:-translate-y-2"
+                  className="group flex flex-col items-center text-center p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-xl hover:-translate-y-2 h-full"
                 >
-                  <div className="relative mb-4">
+                  <div className="relative mb-4 flex-shrink-0">
                     <img
                       className="w-32 h-32 rounded-full object-cover border-4 border-gray-200 dark:border-[#282e39] group-hover:border-primary transition-colors"
                       alt={`Photo of ${member.name}`}
@@ -360,7 +373,7 @@ const About = () => {
               <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-12">
                 Our Culture
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-4 xs:gap-5 sm:gap-6 md:gap-8 lg:gap-10">
                 {[
                   { icon: 'diversity_3', title: 'Diverse & Inclusive', desc: 'We celebrate diversity and believe that different perspectives lead to better solutions. Our team comes from various backgrounds, bringing unique insights to every project.' },
                   { icon: 'school', title: 'Continuous Learning', desc: 'Technology evolves rapidly, and so do we. We invest in our team\'s growth through training, conferences, and knowledge sharing sessions.' },
@@ -369,13 +382,13 @@ const About = () => {
                 ].map((culture, index) => (
                   <div
                     key={index}
-                    className="group flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-lg hover:-translate-y-1"
+                    className="group flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-lg hover:-translate-y-1 h-full"
                   >
-                    <div className="w-14 h-14 rounded-xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-colors">
+                    <div className="w-14 h-14 rounded-xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-colors flex-shrink-0">
                       <span className="material-symbols-outlined text-primary text-4xl">{culture.icon}</span>
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">{culture.title}</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{culture.desc}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed flex-grow text-justify">{culture.desc}</p>
                   </div>
                 ))}
               </div>
@@ -392,10 +405,10 @@ const About = () => {
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
-                  { number: 200, suffix: '+', label: 'Projects Completed', icon: 'check_circle' },
-                  { number: 150, suffix: '+', label: 'Happy Clients', icon: 'favorite' },
-                  { number: 50, suffix: '+', label: 'Team Members', icon: 'groups' },
-                  { number: 10, suffix: '+', label: 'Years Experience', icon: 'calendar_today' },
+                  { number: 100, suffix: '+', label: 'Projects Completed', icon: 'check_circle' },
+                  { number: 98, suffix: '%', label: 'Client Satisfaction Rating', icon: 'favorite' },
+                  { number: 200, suffix: '+', label: 'Employees & Contractors', icon: 'groups' },
+                  { number: 50, suffix: '+', label: 'Industries Served', icon: 'business' },
                 ].map((achievement, index) => (
                   <div key={index} className="text-center group">
                     <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/20 text-primary mb-4 group-hover:bg-primary/30 transition-colors group-hover:scale-110">
@@ -418,14 +431,14 @@ const About = () => {
             <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-12">
               Our Office
             </h2>
-            <div className="max-w-2xl mx-auto">
+            <div className="max-w-4xl mx-auto">
               <div className="group flex flex-col gap-6 p-8 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-xl hover:-translate-y-1">
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 rounded-xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-colors flex-shrink-0">
                     <span className="material-symbols-outlined text-primary text-4xl">business</span>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors mb-1">Zeeniith Headquarters</h3>
+                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors mb-1">ZEENIITH Headquarters</h3>
                     <p className="text-base text-gray-600 dark:text-gray-400">Visit us at our office</p>
                   </div>
                 </div>
@@ -433,8 +446,8 @@ const About = () => {
                   <div className="flex items-start gap-3">
                     <span className="material-symbols-outlined text-primary text-2xl mt-1">location_on</span>
                     <div className="flex flex-col gap-1">
-                      <h4 className="text-lg font-bold text-slate-900 dark:text-white">San Francisco, USA</h4>
-                      <p className="text-base text-gray-600 dark:text-gray-400">123 Innovation Drive, Tech City, CA 94105</p>
+                      <h4 className="text-lg font-bold text-slate-900 dark:text-white">Anand, Gujarat, India</h4>
+                      <p className="text-base text-gray-600 dark:text-gray-400">121 Narayan Empire, A.V. Road, Anand, Gujarat 388120, India</p>
                     </div>
                   </div>
                 </div>
@@ -449,7 +462,7 @@ const About = () => {
             <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-4">
               Our Partners
             </h2>
-            <p className="text-center text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
+            <p className="text-center text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-4xl mx-auto mb-12">
               We collaborate with leading technology companies and platforms to deliver the best solutions for our clients.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -471,14 +484,14 @@ const About = () => {
             <span className="material-symbols-outlined text-white text-3xl">handshake</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-[-0.015em]">
-            Let's Create Together
+            Let's Work Together
           </h2>
           <p className="max-w-xl text-white/90 text-base md:text-lg">
-            Have a project in mind? We'd love to hear about it. Let's collaborate to build something amazing.
+            Ready to partner with us? We're here to help your business succeed.
           </p>
           <Link to="/contact">
             <button className="flex min-w-[120px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-8 bg-white text-primary text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95">
-              <span className="truncate">Work With Us</span>
+              <span className="truncate">Start a Conversation</span>
             </button>
           </Link>
         </section>

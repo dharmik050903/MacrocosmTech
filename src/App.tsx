@@ -37,10 +37,10 @@ function App() {
                   <Route path="*" element={<Home />} />
                 </Routes>
               </main>
-              <Footer />
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     </Router>
   )

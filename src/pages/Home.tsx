@@ -169,36 +169,24 @@ const Home = () => {
         >
           <div className="flex flex-col gap-3 xs:gap-4 sm:gap-5 md:gap-6">
             <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight tracking-[-0.033em] text-white drop-shadow-lg px-2">
-              We Build Digital Universes.
+              Custom Software Development and ROI-Driven Digital Marketing Solutions
             </h1>
-            <div className="h-7 xs:h-8 sm:h-9 md:h-10 lg:h-12 text-center overflow-hidden relative">
-              <div className="animate-ticker flex flex-col items-center justify-center">
-                <h2 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-normal h-7 xs:h-8 sm:h-9 md:h-10 lg:h-12 flex items-center justify-center text-white/90 drop-shadow-md whitespace-nowrap">
-                  UI/UX Design
-                </h2>
-                <h2 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-normal h-7 xs:h-8 sm:h-9 md:h-10 lg:h-12 flex items-center justify-center text-white/90 drop-shadow-md whitespace-nowrap">
-                  Web Apps
-                </h2>
-                <h2 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-normal h-7 xs:h-8 sm:h-9 md:h-10 lg:h-12 flex items-center justify-center text-white/90 drop-shadow-md whitespace-nowrap">
-                  Application Development
-                </h2>
-                <h2 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-normal h-7 xs:h-8 sm:h-9 md:h-10 lg:h-12 flex items-center justify-center text-white/90 drop-shadow-md whitespace-nowrap">
-                  Digital Marketing
-                </h2>
-                <h2 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-normal h-7 xs:h-8 sm:h-9 md:h-10 lg:h-12 flex items-center justify-center text-white/90 drop-shadow-md whitespace-nowrap">
-                  Customise Softwares Solution
-                </h2>
-                <h2 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-normal h-7 xs:h-8 sm:h-9 md:h-10 lg:h-12 flex items-center justify-center text-white/90 drop-shadow-md whitespace-nowrap">
-                  UI/UX Design
-                </h2>
-              </div>
-            </div>
+            <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-normal text-white/90 drop-shadow-md px-2 max-w-4xl mx-auto">
+              We design and develop custom software, websites, mobile apps, Run result-driven digital marketing campaigns tailored to your business growth. Transform your vision into reality with India's trusted software development company.
+            </p>
           </div>
-          <Link to="/portfolio">
-            <button className="flex min-w-[120px] xs:min-w-[140px] sm:min-w-[160px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 xs:h-11 sm:h-12 md:h-14 lg:h-16 px-4 xs:px-5 sm:px-6 md:px-8 bg-primary text-white text-sm xs:text-base sm:text-lg md:text-xl font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity shadow-lg">
-              <span className="truncate">Explore Our Work</span>
-            </button>
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-3 xs:gap-4 sm:gap-5">
+            <Link to="/contact">
+              <button className="flex min-w-[120px] xs:min-w-[140px] sm:min-w-[160px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 xs:h-11 sm:h-12 md:h-14 lg:h-16 px-4 xs:px-5 sm:px-6 md:px-8 bg-primary text-white text-sm xs:text-base sm:text-lg md:text-xl font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity shadow-lg">
+                <span className="truncate">Get a Free Consultation Today!</span>
+              </button>
+            </Link>
+            <Link to="/contact">
+              <button className="flex min-w-[120px] xs:min-w-[140px] sm:min-w-[160px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 xs:h-11 sm:h-12 md:h-14 lg:h-16 px-4 xs:px-5 sm:px-6 md:px-8 bg-transparent border-2 border-white text-white text-sm xs:text-base sm:text-lg md:text-xl font-bold leading-normal tracking-[0.015em] hover:bg-white/10 transition-colors shadow-lg">
+                <span className="truncate">Book a Free Call Now!</span>
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -279,47 +267,102 @@ const Home = () => {
         </div>
       </div> */}
 
+      {/* About ZEENIITH Section */}
       <div className="py-8 xs:py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
+        <div className="text-center mb-6 xs:mb-8 sm:mb-10 md:mb-12 px-2 xs:px-4 sm:px-6">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-[-0.015em] mb-2 xs:mb-3 sm:mb-4">
+            About ZEENIITH - Your Trusted Technology Partner
+          </h2>
+          <div className="max-w-6xl mx-auto text-left px-2 xs:px-4 sm:px-6 space-y-4 text-sm xs:text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300">
+            <p className="text-justify">
+              ZEENIITH is a leading software development and digital marketing company based in Anand, Gujarat, committed to delivering innovative technology solutions that drive business growth. As one of the top software development companies in Anand, we combine technical expertise with strategic digital marketing to transform your business.
+            </p>
+            <p className="text-justify">
+              We provide end-to-end custom software services utilizing advanced technology platforms tailored precisely to your specific business requirements. Whether you're a startup seeking your first product or an enterprise undergoing digital transformation, we deliver solutions that scale with your ambitions.
+            </p>
+            <p className="text-justify">
+              Beyond development, we deliver a full spectrum of digital marketing services, from comprehensive SEO to targeted Meta Ads campaigns, ensuring your brand achieves maximum visibility and consistent rankings on search engines.
+            </p>
+          </div>
+          <div className="max-w-5xl mx-auto mt-8 xs:mt-10 sm:mt-12 text-center px-2 xs:px-4 sm:px-6">
+            <h3 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold mb-6 xs:mb-8 sm:mb-10 text-gray-900 dark:text-white">Why Businesses Trust ZEENIITH</h3>
+            <ul className="space-y-3 xs:space-y-4 text-sm xs:text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 list-disc list-inside text-left max-w-4xl mx-auto">
+              <li>Proven expertise in custom software development</li>
+              <li>Comprehensive services across software and marketing</li>
+              <li>Client-centric approach with transparent communication</li>
+              <li>Latest technology stack and industry best practices</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="py-4 xs:py-6 sm:py-8 md:py-10 lg:py-12 xl:py-16">
         <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-[-0.015em] px-2 xs:px-4 sm:px-6 pb-4 xs:pb-6 sm:pb-8 pt-2 xs:pt-4 sm:pt-5 text-center">
-          Featured Projects
+          Our Projects - Explore the Impact We've Created
         </h2>
-        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-3 xs:gap-4 sm:gap-5 md:gap-6 lg:gap-8 p-2 xs:p-3 sm:p-4 md:p-6">
+        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-3 xs:gap-4 sm:gap-5 md:gap-6 lg:gap-8 px-2 xs:px-3 sm:px-4 md:px-6">
           {[
             {
-              alt: 'Abstract colorful gradient with sharp lines',
+              title: 'E-Commerce Platform Redesign',
+              category: 'Website Development',
+              description: 'Complete redesign and rebuilding of e-commerce platform to handle increased traffic and improve user experience.',
+              result: '250% increase in conversions, 40% reduction in cart abandonment, 3x transaction capacity',
+              technologies: 'React, Node.js, MongoDB, AWS, Stripe',
+              alt: 'E-Commerce Platform Project',
               url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDU4yMBR_ekopvLmx8wyvjJ56bpT3XduiciMokV4nY8PVan2s9IZhpnFj8jxo_oO3r3daLvHedq5xgLpUi1wVvUThf0eMt5OkaPsEhKHEa7TChQ5B5H2arNh5VCEMEmxFQCwYrwWe8Z7vgz50mhhw0Mmbgm4xF-lLIrVqWDb6FFhqPv4fSPSFhe3NDqc3P7ZZsYLici736CfQodS2QEeIMq_cmEUGBlrWhev2MBv3_Nwtu_oFOtoXFegAIqF59MPBEL7zhQglrkoUHV',
             },
             {
-              alt: 'A dark 3D render of crystalline structures',
+              title: 'Healthcare Management System',
+              category: 'Custom Software Development',
+              description: 'Comprehensive healthcare management solution for hospitals with patient records, appointment scheduling, and billing.',
+              result: '60% reduction in administrative time, 99.9% uptime, 5000+ daily active users',
+              technologies: 'React, Node.js, PostgreSQL, AWS, Docker',
+              alt: 'Healthcare Management System',
               url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAn6F7aTYSMeLpsPRQty9H__lXFkQL8kCpiKDmeWsPq7_fPLiszsGEHxuYgYRWvvLL8AK9Mms9jefP5ivdffVy_e2MNh7E1EZgH2s--VHf1Sodr8y1gfUR7fNbCsmONxI-6TYSyLd__FSMWe220btDoScDNZHY80gCWI3aibsw0QuALS-LylOPt22ucZffzFUTyvf8LTjKH5Uq74ko4VrHTidK_6QM48Z1Xpjp9l-oMzVbl6KGpbIolJJ21Po3geUVX7ucP-6jC7HN_',
             },
             {
-              alt: 'Holographic liquid texture with waves of pink and blue',
+              title: 'FinTech Mobile App',
+              category: 'Mobile App Development',
+              description: 'Secure mobile banking application with biometric authentication, real-time transactions, and investment tracking.',
+              result: '500K+ downloads, 4.8 star rating, 150% increase in user engagement',
+              technologies: 'React Native, Node.js, MongoDB, AWS, Stripe API',
+              alt: 'FinTech Mobile App',
               url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDpBbNKvId8tdFWgzHMgXO62-rsgWVKYLRyVHjTbosy74QtY61_fD5I8r62U2QMoECYMi8wqa__iEzk1Sx6CAkVUQ-JHJhSr2V7pTn3avShgTSmi3mw5tg_vaR_DcqkvhWTakjf60yCkkHcypqwyaYynclw4oKd3nNivIjrKXbHn9epxf8X8DSrYKLiReJuSyBb3rcQo451pFTziPnVSJCEgK2eDPvVeN4w7deFfcMPFh6tgofoHsHkonf2e6vLK54nFy6R3dNE5Qkh',
             },
-            {
-              alt: 'Blue and purple neon lines on a dark background',
-              url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAPnZ-wAkcV_YlN9ISVpCm4fRTpBhvCF8BuugwfME5RVEBI7a_ohH6IHr6jPDRB5LbSMeTz9u_cqEr318qnT5Nfk3fR5r6ObLE44ASWh_mvqWrEnPdexukSahT0R3buJY0-zIZoGAJls9ewxCZPacDsQNkaFDmdVo6cSrIy_nQHVlmv4ElozpADNSVmVJPgwEHZ4hfnvekGGRY-ygpZX0mVdM6ZNqPRU2aH8_pGNSHnv7UOmmNJklLPD8Y7lxHUHar5C1AwuwmkZXOS',
-            },
-            {
-              alt: 'Abstract white wavy geometric pattern',
-              url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDBA40UASiufYE_ZYv3OOYaxCCFPSePZ257mmQRII_Y9NdyJycYeiahQgZjFDlUhnm7U8GRgt8he-UDS9wcAmSKqxjmnpAVIKOxEF3w4znFEUzklRcB6kIiMNDzPoaAlcu_U-noWvQhKQY8lBPaDYqn1hlSIva2tqxkXGYl5VZ1E0-gvdF4RVMR0pwpbVH9j9KzDmy2p8UGYZEXpyf0TPdlD5XSxk9BxjKWqZ8BQ-mZwdYPsfly_3DQWQcgDjuKo5eEMPaA4b-LivoF',
-            },
-            {
-              alt: 'Minimalist render of pink and purple spheres',
-              url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCjgo5jkZ42_xBva3VbrjZNjK1e14gVEZYKiULfG81bk9fidpmqfod0rEsvNUc38Trst30R1LlDAaund0yW4j-6-OiLXIDzQeOs3muVUawvlCLc-IyX6JS9GHlR1MbOpzsgdKF9W-LdJhNV_u-s1bF9QBuvIc_vQejO-kP_SkwWvVRImb2xsX1XljoXV5nHOdrxCCHYdczNpiJOATU8lZl4YRfNoUx4UR6Xw3TB2muzn6ZWYMYGo0DALcow9hESr3QHQQBsxruTzETw',
-            },
           ].map((project, index) => (
-            <div key={index} className="flex flex-col gap-3 group">
-              <Link to="/portfolio">
+            <Link key={index} to="/portfolio" className="group w-full">
+              <div className="flex flex-col h-full bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] overflow-hidden hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-xl hover:-translate-y-1">
                 <div
-                  className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl overflow-hidden transform group-hover:scale-105 transition-transform duration-300"
+                  className="w-full bg-center bg-no-repeat aspect-square bg-cover overflow-hidden transform group-hover:scale-105 transition-transform duration-300"
                   style={{ backgroundImage: `url("${project.url}")` }}
                   role="img"
                   aria-label={project.alt}
                 />
-              </Link>
-            </div>
+                <div className="p-4 sm:p-5 md:p-6 flex flex-col flex-grow">
+                  <div className="mb-2">
+                    <span className="inline-block text-xs font-semibold text-primary bg-primary/10 dark:bg-primary/20 px-2 py-1 rounded-md mb-2">
+                      {project.category}
+                    </span>
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
+                  </div>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 flex-grow leading-relaxed text-justify">
+                    {project.description}
+                  </p>
+                  <div className="pt-3 border-t border-gray-200 dark:border-[#282e39] space-y-2">
+                    <div>
+                      <p className="text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Result:</p>
+                      <p className="text-sm font-bold text-primary">{project.result}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Technologies:</p>
+                      <p className="text-xs text-gray-600 dark:text-gray-400">{project.technologies}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
           ))}
         </div>
         <div className="text-center pt-4 xs:pt-6 sm:pt-8 md:pt-10">
@@ -351,57 +394,50 @@ const Home = () => {
       </div>
 
       {/* Services Preview Section */}
-      <div className="py-12 md:py-20">
-        <div className="text-center mb-12 px-4">
-          <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-4">
+      <div className="py-8 xs:py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
+        <div className="text-center mb-6 xs:mb-8 sm:mb-10 md:mb-12 px-2 xs:px-4 sm:px-6">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-[-0.015em] mb-2 xs:mb-3 sm:mb-4">
             What We Do
           </h2>
-          <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto px-2">
             We transform ideas into powerful digital experiences that drive results and exceed expectations.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-4 xs:gap-5 sm:gap-6 md:gap-8 lg:gap-10 px-2 xs:px-3 sm:px-4 md:px-6">
           {[
             {
               icon: 'devices',
-              title: 'Web Development',
-              description: 'Custom web applications built with modern frameworks and best practices.',
+              title: 'Software Development',
+              description: 'From custom solutions to mobile apps—we build technology that scales with your business.',
+              buttonText: 'Learn More →',
             },
             {
-              icon: 'phone_iphone',
-              title: 'Mobile Apps',
-              description: 'Native and cross-platform mobile solutions for iOS and Android.',
-            },
-            {
-              icon: 'design_services',
-              title: 'UI/UX Design',
-              description: 'User-centered designs that combine aesthetics with functionality.',
+              icon: 'campaign',
+              title: 'Digital Marketing',
+              description: 'Strategic marketing campaigns that drive visibility, traffic, and conversions.',
+              buttonText: 'Learn More →',
             },
             {
               icon: 'cloud_sync',
-              title: 'Cloud Solutions',
-              description: 'Scalable cloud infrastructure and DevOps services.',
-            },
-            {
-              icon: 'neurology',
-              title: 'AI & ML',
-              description: 'Intelligent solutions powered by artificial intelligence.',
-            },
-            {
-              icon: 'rocket_launch',
-              title: 'Digital Strategy',
-              description: 'Strategic consulting to help you achieve your digital goals.',
+              title: 'Cloud & AI Solutions',
+              description: 'Modernize your infrastructure with cloud computing and AI-powered automation.',
+              buttonText: 'Learn More →',
             },
           ].map((service, index) => (
             <div
               key={index}
-              className="flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-lg group"
+              className="flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-lg group h-full"
             >
-              <span className="material-symbols-outlined text-primary text-4xl group-hover:scale-110 transition-transform">
+              <span className="material-symbols-outlined text-primary text-4xl group-hover:scale-110 transition-transform flex-shrink-0">
                 {service.icon}
               </span>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white">{service.title}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">{service.description}</p>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">{service.title}</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed flex-grow text-justify">{service.description}</p>
+              <Link to="/services" className="mt-auto">
+                <button className="text-primary font-semibold hover:underline text-sm">
+                  {service.buttonText}
+                </button>
+              </Link>
             </div>
           ))}
         </div>
@@ -415,16 +451,16 @@ const Home = () => {
       </div>
 
       {/* Why Choose Us Section */}
-      <div className="py-12 md:py-20 bg-primary/5 dark:bg-primary/10 rounded-xl mx-4 my-8">
-        <div className="text-center mb-12 px-4">
-          <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-4">
-            Why Choose Zeeniith
+      <div className="py-8 xs:py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-primary/5 dark:bg-primary/10 rounded-xl mx-2 xs:mx-3 sm:mx-4 md:mx-6 lg:mx-8 my-4 xs:my-6 sm:my-8">
+        <div className="text-center mb-6 xs:mb-8 sm:mb-10 md:mb-12 px-2 xs:px-4 sm:px-6">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-[-0.015em] mb-2 xs:mb-3 sm:mb-4">
+            Why Choose ZEENIITH
           </h2>
-          <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto px-2">
             We're not just developers—we're your partners in digital transformation.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-4 xs:gap-5 sm:gap-6 md:gap-8 lg:gap-10 px-2 xs:px-3 sm:px-4 md:px-6">
           {[
             {
               icon: 'speed',
@@ -442,12 +478,12 @@ const Home = () => {
               description: 'Our dedicated support team is always ready to help you, ensuring your projects run smoothly.',
             },
           ].map((feature, index) => (
-            <div key={index} className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/20 text-primary mb-4">
+            <div key={index} className="flex flex-col items-center text-center h-full">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/20 text-primary mb-4 flex-shrink-0">
                 <span className="material-symbols-outlined text-3xl">{feature.icon}</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{feature.title}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">{feature.description}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 text-justify">{feature.description}</p>
             </div>
           ))}
         </div>
@@ -470,8 +506,8 @@ const Home = () => {
             { number: '03', title: 'Develop', desc: 'We build with clean, efficient code' },
             { number: '04', title: 'Deploy', desc: 'We launch and support your solution' },
           ].map((step, index) => (
-            <div key={index} className="flex flex-col items-center text-center">
-              <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mb-4">
+            <div key={index} className="flex flex-col items-center text-center h-full">
+              <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mb-4 flex-shrink-0">
                 <span className="text-primary text-2xl font-bold">{step.number}</span>
               </div>
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{step.title}</h3>
@@ -482,44 +518,113 @@ const Home = () => {
       </div>
 
       {/* Testimonials Section */}
-      <div className="py-12 md:py-20">
-        <div className="text-center mb-12 px-4">
-          <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-4">
-            What Our Clients Say
+      <div className="py-8 xs:py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
+        <div className="text-center mb-6 xs:mb-8 sm:mb-10 md:mb-12 px-2 xs:px-4 sm:px-6">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-[-0.015em] mb-2 xs:mb-3 sm:mb-4">
+            Loved by Businesses Worldwide
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
+        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-4 xs:gap-5 sm:gap-6 md:gap-8 lg:gap-10 px-2 xs:px-3 sm:px-4 md:px-6">
           {[
             {
-              quote: "Zeeniith transformed our business with their innovative approach. The team's expertise and dedication are unmatched.",
-              author: 'Sarah Johnson',
-              role: 'CEO, TechStart Inc.',
+              quote: "Working with ZEENIITH transformed our entire business. They didn't just develop our software - they understood our vision and delivered a solution that exceeded our expectations. The team's professionalism, communication, and dedication to quality are exceptional. Our operational efficiency improved by 60% and we've already recommended ZEENIITH to multiple business partners.",
+              author: 'Rajesh Kumar',
+              role: 'CEO',
+              company: 'TechVenture Solutions',
+              rating: 5,
               image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDqpQqF66IwQIaIrIO73eMBSFTweSiRXQ1Ez3AkCheIy7lrQs4lZI8vCvrbdyRKCKdIBmmbtilT9jBx1SETh9c4lxNZO90Nbr1x7UUBznn7vKDlQWzVWOzQRg4Gj4TZkHoJogGNdpFUIoy8o0vk1aFrHrmc7C6cYZ38elWPXlNb0bqjJkPvvI6WykpJSGy1vQrCdetStv904u9AjsA5nbykMlShhJh54yhIvOVzGFr7wTv9rm64ZdlcgcTCrbFHlR1V87OL-BpiJLlG',
             },
             {
-              quote: "Working with Zeeniith was a game-changer. They delivered beyond our expectations and continue to support us every step of the way.",
-              author: 'Michael Chen',
-              role: 'CTO, InnovateLabs',
+              quote: "We needed a robust e-commerce platform to handle our growing business. ZEENIITH delivered a scalable, fast-loading solution that helped us increase conversions by 150% in the first quarter. Their support team is incredibly responsive and helpful. Best investment we've made for our business.",
+              author: 'Priya Sharma',
+              role: 'CTO',
+              company: 'Digital Innovations Pvt Ltd',
+              rating: 5,
+              image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBUJCPHqoaSKTPucwg5Hu9K91-lFhT--r-S6F6upjVgTfIaMeYLOH_pm_VDhJD-mJ1bK9B_mOuuX9RIdsDZcsuSD1mFSKbvd0chPYXm5yqq51gG_Er0i_rCAyRrLUvOSz74iapwLe-OlxBv9jFEVnRkLA56d5mX-PQO1fM_TdAfTVVTElzPjnwbBGinmUywQKH4c3JNNd0UHjangcSvoHvcNTLtsgAMY0g4Rq1DMIfi7qnHzuABg1e1S_wfxV74-KzXOtSLrDq46STU',
+            },
+            {
+              quote: "The digital marketing expertise at ZEENIITH is outstanding. They took our online presence from non-existent to first-page Google rankings in just 4 months. We went from 0 organic leads to 50+ qualified leads monthly. Highly recommended!",
+              author: 'Amit Patel',
+              role: 'Marketing Director',
+              company: 'GrowthHub India',
+              rating: 5,
+              image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDqpQqF66IwQIaIrIO73eMBSFTweSiRXQ1Ez3AkCheIy7lrQs4lZI8vCvrbdyRKCKdIBmmbtilT9jBx1SETh9c4lxNZO90Nbr1x7UUBznn7vKDlQWzVWOzQRg4Gj4TZkHoJogGNdpFUIoy8o0vk1aFrHrmc7C6cYZ38elWPXlNb0bqjJkPvvI6WykpJSGy1vQrCdetStv904u9AjsA5nbykMlShhJh54yhIvOVzGFr7wTv9rm64ZdlcgcTCrbFHlR1V87OL-BpiJLlG',
+            },
+            {
+              quote: "ZEENIITH's team built our mobile app from scratch. Not only is the app beautiful and user-friendly, but their continued support has been invaluable. We've already hit 10,000 downloads and they're helping us scale. Great partner!",
+              author: 'Sneha Mehta',
+              role: 'Founder',
+              company: 'StartupNest',
+              rating: 5,
               image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBUJCPHqoaSKTPucwg5Hu9K91-lFhT--r-S6F6upjVgTfIaMeYLOH_pm_VDhJD-mJ1bK9B_mOuuX9RIdsDZcsuSD1mFSKbvd0chPYXm5yqq51gG_Er0i_rCAyRrLUvOSz74iapwLe-OlxBv9jFEVnRkLA56d5mX-PQO1fM_TdAfTVVTElzPjnwbBGinmUywQKH4c3JNNd0UHjangcSvoHvcNTLtsgAMY0g4Rq1DMIfi7qnHzuABg1e1S_wfxV74-KzXOtSLrDq46STU',
             },
           ].map((testimonial, index) => (
             <div
               key={index}
-              className="flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39]"
+              className="flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] h-full"
             >
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 flex-shrink-0">
                 <img
                   src={testimonial.image}
                   alt={testimonial.author}
-                  className="w-16 h-16 rounded-full object-cover"
+                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
                   loading="lazy"
                 />
-                <div>
-                  <h4 className="font-bold text-gray-900 dark:text-white">{testimonial.author}</h4>
-                  <p className="text-sm text-primary">{testimonial.role}</p>
+                <div className="min-w-0">
+                  <h4 className="font-bold text-gray-900 dark:text-white truncate">{testimonial.author}</h4>
+                  <p className="text-sm text-primary truncate">{testimonial.role}</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-500 truncate">{testimonial.company}</p>
                 </div>
               </div>
-              <p className="text-gray-700 dark:text-gray-300 italic">"{testimonial.quote}"</p>
+              <div className="flex items-center gap-1 mb-2">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <span key={i} className="text-yellow-400 text-lg">★</span>
+                ))}
+              </div>
+              <p className="text-gray-700 dark:text-gray-300 italic flex-grow">"{testimonial.quote}"</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Blog Preview Section */}
+      <div className="py-8 xs:py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
+        <div className="text-center mb-6 xs:mb-8 sm:mb-10 md:mb-12 px-2 xs:px-4 sm:px-6">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-[-0.015em] mb-2 xs:mb-3 sm:mb-4">
+            Insights - Actionable Perspectives from Experts
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-4 xs:gap-5 sm:gap-6 md:gap-8 lg:gap-10 px-2 xs:px-3 sm:px-4 md:px-6">
+          {[
+            {
+              title: 'How Custom Software Helps Businesses Grow',
+              excerpt: 'Discover how tailored software solutions streamline operations, reduce costs, and accelerate business growth. Learn why custom software delivers 3x better ROI than off-the-shelf solutions.',
+              buttonText: 'Read More →',
+            },
+            {
+              title: 'Future of Software Development in India',
+              excerpt: 'Explore emerging trends, technologies, and opportunities shaping the Indian software development landscape. What\'s next in 2025? AI integration, cloud-native development, and more.',
+              buttonText: 'Read More →',
+            },
+            {
+              title: 'Why Mobile Apps Are Important for Startups in 2025',
+              excerpt: 'Learn how a strategic mobile app can help startups acquire customers, build engagement, and scale faster. Statistics show 87% of time on phones is spent in apps.',
+              buttonText: 'Read More →',
+            },
+            {
+              title: 'Best Digital Marketing Strategies to Grow Your Business in 2025',
+              excerpt: 'From AI-powered SEO to performance marketing, discover the strategies that deliver maximum ROI. Learn what\'s working and what\'s not in 2025.',
+              buttonText: 'Read More →',
+            },
+          ].map((post, index) => (
+            <div key={index} className="flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-lg h-full">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white">{post.title}</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed flex-grow text-justify">{post.excerpt}</p>
+              <Link to="/blog">
+                <button className="text-primary font-semibold hover:underline text-sm mt-auto">
+                  {post.buttonText}
+                </button>
+              </Link>
             </div>
           ))}
         </div>
@@ -529,15 +634,15 @@ const Home = () => {
       <div className="py-16 md:py-24 bg-primary text-white rounded-xl mx-4 my-8">
         <div className="text-center px-4 max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-bold leading-tight tracking-[-0.015em] mb-6">
-            Ready to Build Something Amazing?
+            Ready to Bring Your Vision to Life?
           </h2>
           <p className="text-lg md:text-xl text-white/90 mb-8">
-            Let's discuss your project and turn your vision into reality. We're here to help you succeed.
+            Let's build something amazing together. Whether you need custom software, a stunning website, a mobile app, or a powerful digital marketing strategy - we're here to help you succeed.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
               <button className="flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-8 bg-white text-primary text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
-                <span className="truncate">Get Started Today</span>
+                <span className="truncate">Grow Your Business Now!</span>
               </button>
             </Link>
             <Link to="/portfolio">

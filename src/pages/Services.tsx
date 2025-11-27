@@ -163,10 +163,10 @@ const Services = () => {
                 <span className="text-primary text-sm font-bold">Our Services</span>
               </div>
               <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.033em] drop-shadow-lg">
-                Building the Future, One Line of Code at a Time.
+                Comprehensive Technology & Marketing Solutions
               </h1>
               <p className="text-white/90 dark:text-white/80 text-base md:text-lg leading-relaxed max-w-2xl drop-shadow-md">
-                Zeeniith delivers innovative and scalable software solutions tailored to your unique vision. We partner with you to turn ambitious ideas into reality.
+                Smart, scalable, and secure solutions designed to accelerate your business growth
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -189,16 +189,16 @@ const Services = () => {
       <div className="py-8 xs:py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
         <div className="text-center mb-8 xs:mb-10 sm:mb-12 md:mb-16 px-2 xs:px-4 sm:px-6">
           <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-[-0.015em] mb-2 xs:mb-3 sm:mb-4">
-            Our Services
+            Software Development - Smart, Scalable and Secure Solutions
           </h2>
-          <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto px-2">
-            Comprehensive solutions tailored to your business needs
+          <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto px-2">
+            Transform your business vision into powerful, scalable reality
           </p>
         </div>
 
         {/* Tabs */}
         <div className="px-2 xs:px-4 sm:px-6 mb-6 xs:mb-8">
-          <div className="flex border-b border-slate-200 dark:border-[#3b4354] gap-4 xs:gap-6 sm:gap-8 max-w-2xl mx-auto justify-center overflow-x-auto">
+          <div className="flex border-b border-slate-200 dark:border-[#3b4354] gap-4 xs:gap-6 sm:gap-8 max-w-5xl mx-auto justify-center overflow-x-auto">
             <button
               onClick={() => setActiveTab('platform')}
               className={`flex items-center justify-center border-b-[3px] pb-3 xs:pb-4 pt-2 px-4 xs:px-6 transition-all flex-shrink-0 ${
@@ -223,30 +223,30 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-4 xs:gap-5 sm:gap-6 md:gap-8 lg:gap-10 px-2 xs:px-3 sm:px-4 md:px-6">
+        <div className={`grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-4 xs:gap-5 sm:gap-6 md:gap-8 lg:gap-10 px-2 xs:px-3 sm:px-4 md:px-6 ${(activeTab === 'platform' ? servicesByPlatform : servicesByTechnology).length === 5 ? 'grid-5-items' : ''}`}>
           {(activeTab === 'platform' ? servicesByPlatform : servicesByTechnology).map((service, index) => (
             <div
               key={index}
-              className="group flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-slate-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-xl hover:-translate-y-1"
+              className="group flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-slate-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-xl hover:-translate-y-1 h-full"
             >
-            <div className="flex items-start gap-4">
+            <div className="flex items-start gap-4 flex-shrink-0">
               <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-colors">
                 <span className="material-symbols-outlined text-primary text-3xl">{service.icon}</span>
               </div>
-              <div className="flex-1">
+              <div className="flex-1 min-w-0">
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-sm text-slate-600 dark:text-gray-400 leading-relaxed">
+                <p className="text-sm text-slate-600 dark:text-gray-400 leading-relaxed text-justify">
                   {service.description}
                 </p>
               </div>
             </div>
             {service.features && (
-              <div className="pt-2 border-t border-gray-200 dark:border-[#282e39]">
+              <div className="pt-2 border-t border-gray-200 dark:border-[#282e39] mt-auto">
                 <ul className="flex flex-wrap gap-2">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="text-xs px-3 py-1 bg-gray-100 dark:bg-white/5 rounded-full text-gray-600 dark:text-gray-400">
+                    <li key={idx} className="text-xs px-3 py-1 bg-gray-100 dark:bg-white/5 rounded-full text-gray-600 dark:text-gray-400 whitespace-nowrap">
                       {feature}
                     </li>
                   ))}
@@ -265,11 +265,11 @@ const Services = () => {
             <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-4">
               Our Development Process
             </h2>
-            <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-4xl mx-auto">
               A proven methodology that ensures success from concept to launch
             </p>
           </div>
-          <div className="relative max-w-6xl mx-auto">
+          <div className="relative max-w-7xl mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
               {processSteps.map((step, index) => (
                 <div key={index} className="flex flex-col items-center text-center group relative">
@@ -304,11 +304,11 @@ const Services = () => {
             <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-4">
               Our Technology Stack
             </h2>
-            <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-4xl mx-auto">
               Cutting-edge tools and frameworks we use to build exceptional solutions
             </p>
           </div>
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             {/* First Row - 8 items */}
             <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-6 mb-6">
               {techStack.slice(0, 8).map((tech, index) => (
@@ -327,7 +327,7 @@ const Services = () => {
               ))}
             </div>
             {/* Second Row - 6 items (centered) */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 max-w-6xl mx-auto">
               {techStack.slice(8, 14).map((tech, index) => (
                 <div
                   key={index + 8}
@@ -352,45 +352,69 @@ const Services = () => {
         <div className="px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-4">
-              Why Choose Our Services
+              Why Choose ZEENIITH - Top Software Development Company in Anand
             </h2>
-            <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-4xl mx-auto">
               What sets us apart in delivering exceptional results
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {[
               {
                 icon: 'verified_user',
-                title: 'Expert Team',
-                description: 'Our team consists of certified professionals with years of experience in their respective fields.',
-                stat: '50+ Experts',
+                title: 'Personalized Solutions',
+                description: 'Every business is unique, and so are our solutions. We take time to understand your specific requirements, challenges, and goals to deliver scalable digital solutions that perfectly fit your needs. No cookie-cutter approaches - every solution is custom-built.',
+                stat: '100% Custom',
               },
               {
                 icon: 'schedule',
-                title: 'On-Time Delivery',
-                description: 'We respect deadlines and deliver projects on time without compromising quality.',
-                stat: '98% On-Time',
+                title: 'Quick, Transparent Project Management',
+                description: 'No surprises, no hidden costs, no unclear timelines. We maintain complete transparency throughout the development process with regular updates, clear communication, and milestone-based delivery. You\'ll always know exactly where your project stands.',
+                stat: '100% Transparent',
               },
               {
                 icon: 'security',
-                title: 'Secure & Reliable',
-                description: 'We follow industry best practices to ensure your applications are secure and reliable.',
-                stat: '100% Secure',
+                title: 'Proven Track Record',
+                description: 'Our portfolio speaks for itself. We\'ve successfully delivered 100+ projects across various industries, helping businesses achieve their digital transformation goals. Our clients\' success stories demonstrate our capability and commitment.',
+                stat: '100+ Projects',
+              },
+              {
+                icon: 'speed',
+                title: 'Fast Delivery',
+                description: 'Time is money in business. Our agile development methodology ensures quick turnarounds without compromising on quality. We understand the importance of getting your product to market fast while maintaining excellence.',
+                stat: 'Fast Turnaround',
+              },
+              {
+                icon: 'code',
+                title: 'Latest Technologies Stack',
+                description: 'We stay ahead of the curve by utilizing the most advanced technologies and frameworks. From React and Node.js to AI and cloud solutions, we leverage modern tools for superior results and future-proof solutions.',
+                stat: 'Modern Tech',
+              },
+              {
+                icon: 'analytics',
+                title: 'Data-Driven Marketing',
+                description: 'Our marketing strategies are backed by real data and analytics. We continuously monitor, analyze, and optimize campaigns to maximize your ROI and achieve sustainable online growth.',
+                stat: 'Data-Driven',
+              },
+              {
+                icon: 'star',
+                title: 'Strong Portfolio with Optimum Client Satisfaction',
+                description: 'Our clients consistently rate us 4.8/5 stars. We maintain long-term relationships with clients because we prioritize their success and deliver exceptional results.',
+                stat: '4.8/5 Stars',
               },
             ].map((feature, index) => (
                <div
                  key={index}
-                 className="flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-slate-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-xl group"
+                 className="flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-slate-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-xl group h-full"
                >
-                 <div className="flex items-center gap-4">
+                 <div className="flex items-center gap-4 flex-shrink-0">
                    <div className="w-14 h-14 rounded-xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-colors flex-shrink-0">
                      <span className="material-symbols-outlined text-primary text-3xl">{feature.icon}</span>
                    </div>
                    <span className="text-xl font-bold text-primary flex-shrink-0">{feature.stat}</span>
                  </div>
                  <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">{feature.title}</h3>
-                 <p className="text-sm text-slate-600 dark:text-gray-400 leading-relaxed">{feature.description}</p>
+                 <p className="text-sm text-slate-600 dark:text-gray-400 leading-relaxed flex-grow text-justify">{feature.description}</p>
                </div>
             ))}
           </div>
@@ -404,11 +428,11 @@ const Services = () => {
             <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-4">
               Success Stories
             </h2>
-            <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-4xl mx-auto">
               Real results from real clients
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
             {[
               {
                 title: 'E-Commerce Platform',
@@ -427,9 +451,9 @@ const Services = () => {
             ].map((caseStudy, index) => (
               <div
                 key={index}
-                className="flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-xl group overflow-hidden"
+                className="flex flex-col gap-4 p-6 bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-xl group overflow-hidden h-full"
               >
-                <div className="w-full h-48 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+                <div className="w-full h-48 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800 flex-shrink-0">
                   <img
                     src={caseStudy.image}
                     alt={caseStudy.title}
@@ -437,18 +461,18 @@ const Services = () => {
                     loading="lazy"
                   />
                 </div>
-                <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">{caseStudy.title}</h3>
-                  <span className="text-primary text-sm font-bold bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-full">{caseStudy.client}</span>
+                <div className="flex items-center justify-between flex-shrink-0">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors min-w-0 flex-1">{caseStudy.title}</h3>
+                  <span className="text-primary text-sm font-bold bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-full flex-shrink-0 ml-2">{caseStudy.client}</span>
                 </div>
-                <p className="text-sm text-slate-600 dark:text-gray-400 leading-relaxed">{caseStudy.description}</p>
-                <div className="flex items-center gap-3 pt-3 border-t border-gray-200 dark:border-[#282e39]">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center">
+                <p className="text-sm text-slate-600 dark:text-gray-400 leading-relaxed flex-grow">{caseStudy.description}</p>
+                <div className="flex items-center gap-3 pt-3 border-t border-gray-200 dark:border-[#282e39] flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center flex-shrink-0">
                     <span className="material-symbols-outlined text-primary text-xl">trending_up</span>
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-xs text-gray-500 dark:text-gray-500">Result</p>
-                    <p className="text-sm font-bold text-primary">{caseStudy.result}</p>
+                    <p className="text-sm font-bold text-primary truncate">{caseStudy.result}</p>
                   </div>
                 </div>
               </div>
@@ -471,31 +495,51 @@ const Services = () => {
             <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-4xl mx-auto">
               Everything you need to know about our services
             </p>
           </div>
-          <div className="max-w-4xl mx-auto space-y-4">
+          <div className="max-w-6xl mx-auto space-y-4">
             {[
               {
-                question: 'How long does a typical project take?',
-                answer: 'Project timelines vary based on scope and complexity. A simple website might take 4-6 weeks, while a complex enterprise application could take 3-6 months. We provide detailed timelines during the discovery phase.',
-                icon: 'schedule',
-              },
-              {
-                question: 'Do you provide ongoing support?',
-                answer: 'Yes, we offer comprehensive support packages including maintenance, updates, bug fixes, and feature enhancements. Our support team is available 24/7 for critical issues.',
-                icon: 'support_agent',
-              },
-              {
-                question: 'What technologies do you specialize in?',
-                answer: 'We work with a wide range of modern technologies including React, Vue.js, Node.js, Python, Swift, Kotlin, and cloud platforms like AWS, Azure, and GCP. We choose the best stack for each project.',
+                question: 'What is custom software development?',
+                answer: 'Custom software is tailored specifically to your business needs, unlike generic off-the-shelf solutions. It\'s built to perfectly match your workflows and requirements.',
                 icon: 'code',
               },
               {
-                question: 'Can you work with our existing team?',
-                answer: 'Absolutely! We excel at collaborating with in-house teams. We can integrate seamlessly with your existing workflows and provide expertise where needed.',
+                question: 'How long does development take?',
+                answer: 'Timeline varies by project complexity. Simple apps: 4-8 weeks. Medium complexity: 8-16 weeks. Enterprise solutions: 3-6 months+.',
+                icon: 'schedule',
+              },
+              {
+                question: 'What technologies do you use?',
+                answer: 'We use modern tech stacks including React, Node.js, Python, Java, Flutter, AWS, Azure, and Google Cloud Platform. Selection depends on your project needs.',
+                icon: 'settings',
+              },
+              {
+                question: 'Do you provide post-launch support?',
+                answer: 'Yes! We provide 3 months of free support. Extended support available through maintenance packages.',
+                icon: 'support_agent',
+              },
+              {
+                question: 'What\'s your pricing model?',
+                answer: 'We offer flexible models: Fixed price (budget certainty), Time & Materials (flexibility), or Retainer (ongoing support).',
+                icon: 'payments',
+              },
+              {
+                question: 'How do you ensure quality?',
+                answer: 'We follow agile methodology with regular testing, code reviews, and quality assurance throughout development.',
+                icon: 'verified',
+              },
+              {
+                question: 'Can you work with existing teams?',
+                answer: 'Absolutely! We collaborate seamlessly with your in-house teams and third-party vendors.',
                 icon: 'groups',
+              },
+              {
+                question: 'How do I get started?',
+                answer: 'Schedule a free consultation with our team. We\'ll discuss your project requirements and provide recommendations.',
+                icon: 'rocket_launch',
               },
             ].map((faq, index) => (
               <div
@@ -505,7 +549,7 @@ const Services = () => {
                 <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 dark:bg-primary/20 flex items-center justify-center group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-colors">
                   <span className="material-symbols-outlined text-primary text-2xl">{faq.icon}</span>
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 min-w-0">
                   <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">{faq.question}</h3>
                   <p className="text-sm text-slate-600 dark:text-gray-400 leading-relaxed">{faq.answer}</p>
                 </div>

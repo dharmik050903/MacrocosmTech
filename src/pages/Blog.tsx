@@ -152,7 +152,7 @@ const Blog = () => {
 
         {/* Category Filters */}
         <section className="px-4 sm:px-6 md:px-8 lg:px-10">
-          <div className="max-w-[1400px] mx-auto">
+          <div className="max-w-7xl mx-auto">
             <div className="flex gap-3 flex-wrap items-center justify-center mb-12">
               {categories.map((category) => (
                 <button
@@ -173,15 +173,15 @@ const Blog = () => {
 
         {/* Blog Posts Grid */}
         <section className="px-2 xs:px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
-          <div className="max-w-[1400px] mx-auto">
+          <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-4 xs:gap-5 sm:gap-6 md:gap-8 lg:gap-10">
               {filteredPosts.map((post) => (
                 <article
                   key={post.id}
-                  className="group flex flex-col bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-[border-color,box-shadow,transform] duration-300 hover:shadow-xl overflow-hidden"
+                  className="group flex flex-col bg-white dark:bg-[#1C2333] rounded-xl border border-gray-200 dark:border-[#282e39] hover:border-primary/50 dark:hover:border-primary/50 transition-[border-color,box-shadow,transform] duration-300 hover:shadow-xl overflow-hidden h-full"
                 >
                   <div className="group-hover:-translate-y-2 transition-transform duration-300 flex flex-col h-full">
-                    <div className="relative w-full h-48 overflow-hidden rounded-t-xl">
+                    <div className="relative w-full h-48 overflow-hidden rounded-t-xl flex-shrink-0">
                       <img
                         src={post.image}
                         alt={post.title}
@@ -194,7 +194,7 @@ const Blog = () => {
                         </span>
                       </div>
                     </div>
-                    <div className="flex flex-col gap-4 p-6 flex-1">
+                    <div className="flex flex-col gap-4 p-6 flex-1 min-h-0">
                       <div className="flex items-center gap-3 text-xs text-gray-500 dark:text-gray-400">
                         <span className="flex items-center gap-1">
                           <span className="material-symbols-outlined text-sm">person</span>
@@ -212,7 +212,7 @@ const Blog = () => {
                       <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors line-clamp-2">
                         {post.title}
                       </h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-3 flex-1">
+                      <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-3 flex-1 text-justify">
                         {post.excerpt}
                       </p>
                       <Link to={`/blog/${post.id}`} className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:gap-3 transition-all group/link">
